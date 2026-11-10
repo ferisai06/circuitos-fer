@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Laboratorio de Kirchhoff</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:var(--f-mono);font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.static{position:static}.fixed{position:fixed}.z-50{z-index:50}.-mx-1{margin-left:-.25rem;margin-right:-.25rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-3{margin-bottom:.75rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.table{display:table}.grid{display:grid}.contents{display:contents}.h-auto{height:auto}.min-h-full{min-height:100%}.w-full{width:100%}.min-w-0{min-width:0}.min-w-\[13rem\]{min-width:13rem}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.resize{resize:both}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-x-2{-moz-column-gap:.5rem;column-gap:.5rem}.overflow-x-auto{overflow-x:auto}.break-words{overflow-wrap:break-word}.px-1{padding-left:.25rem;padding-right:.25rem}.px-4{padding-left:1rem;padding-right:1rem}.pb-1{padding-bottom:.25rem}.pb-10{padding-bottom:2.5rem}.pb-16{padding-bottom:4rem}.pb-3{padding-bottom:.75rem}.pb-4{padding-bottom:1rem}.pb-5{padding-bottom:1.25rem}.pt-1{padding-top:.25rem}.pt-3\.5{padding-top:.875rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.font-display{font-family:var(--f-display)}.text-\[0\.75rem\]{font-size:.75rem}.text-\[0\.76rem\]{font-size:.76rem}.text-\[0\.84rem\]{font-size:.84rem}.text-\[0\.85rem\]{font-size:.85rem}.text-\[0\.86rem\]{font-size:.86rem}.text-\[0\.88rem\]{font-size:.88rem}.text-\[0\.8rem\]{font-size:.8rem}.text-\[0\.92rem\]{font-size:.92rem}.text-\[0\.98rem\]{font-size:.98rem}.text-\[0\.9rem\]{font-size:.9rem}.text-\[1\.05rem\]{font-size:1.05rem}.text-\[1\.15rem\]{font-size:1.15rem}.text-\[1\.1rem\]{font-size:1.1rem}.text-\[1\.35rem\]{font-size:1.35rem}.text-\[1\.3rem\]{font-size:1.3rem}.text-\[2rem\]{font-size:2rem}.font-semibold{font-weight:600}.leading-\[1\.05\]{line-height:1.05}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.text-ink{color:var(--ink)}.text-muted{color:var(--muted)}.opacity-70{opacity:.7}.invert{--tw-invert:invert(100%)}.filter,.invert{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}@media (min-width:640px){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:px-3{padding-left:.75rem;padding-right:.75rem}.sm\:px-5{padding-left:1.25rem;padding-right:1.25rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-8{padding-top:2rem}.sm\:text-\[2\.6rem\]{font-size:2.6rem}}@media (min-width:1024px){.lg\:sticky{position:sticky}.lg\:top-4{top:1rem}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:max-h-\[calc\(100dvh-2rem\)\]{max-height:calc(100dvh - 2rem)}.lg\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.lg\:grid-cols-\[minmax\(0\2c 1\.04fr\)_minmax\(0\2c 1fr\)\]{grid-template-columns:minmax(0,1.04fr) minmax(0,1fr)}.lg\:flex-col{flex-direction:column}.lg\:gap-5{gap:1.25rem}.lg\:overflow-y-auto{overflow-y:auto}.lg\:pr-1{padding-right:.25rem}}@media (min-width:1536px){.\32xl\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}</style>
+<style>
+/* Plano de laboratorio: papel cuadriculado azul frío, tinta oscura, un acento azul eléctrico.
+   Mallas/nodos usan teal, magenta y violeta; la corriente animada es ámbar. */
+:root {
+  --bg: #edf1f7;
+  --surface: #ffffff;
+  --surface2: #f5f7fb;
+  --ink: #0f1b2e;
+  --muted: #56667d;
+  --line: #d6deea;
+  --accent: #1f4fd1;
+  --accent-ink: #ffffff;
+  --wire: #1b2a42;
+  --flow: #e8a100;
+  --c1: #0d9488;
+  --c2: #d1307c;
+  --c3: #6a45dc;
+  --sup: #e2620b;
+  --ok: #157a3c;
+  --bad: #b42318;
+  --grid: rgba(31, 79, 209, 0.07);
+  --shadow: 0 1px 2px rgba(15, 27, 46, 0.06), 0 6px 24px rgba(15, 27, 46, 0.06);
+  --f-display: 'Bricolage Grotesque', 'IBM Plex Sans', system-ui, sans-serif;
+  --f-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a1120; --surface: #111b2e; --surface2: #0d1627; --ink: #e6edf8; --muted: #93a4bc; --line: #24334d;
+    --accent: #84a9ff; --accent-ink: #0a1120; --wire: #cbd7ea; --flow: #ffc94a;
+    --c1: #2dd4bf; --c2: #f472b6; --c3: #a78bfa; --sup: #fb923c; --ok: #4ade80; --bad: #f87171;
+    --grid: rgba(132, 169, 255, 0.05); --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a1120; --surface: #111b2e; --surface2: #0d1627; --ink: #e6edf8; --muted: #93a4bc; --line: #24334d;
+  --accent: #84a9ff; --accent-ink: #0a1120; --wire: #cbd7ea; --flow: #ffc94a;
+  --c1: #2dd4bf; --c2: #f472b6; --c3: #a78bfa; --sup: #fb923c; --ok: #4ade80; --bad: #f87171;
+  --grid: rgba(132, 169, 255, 0.05); --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.25);
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body {
+  margin: 0; background-color: var(--bg); color: var(--ink); font-family: var(--f-body);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px; -webkit-font-smoothing: antialiased;
+}
+#root { min-height: 100%; }
+h1, h2 { text-wrap: balance; }
+.font-display { font-family: var(--f-display); font-weight: 700; letter-spacing: -0.01em; }
+.kicker { font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.mx { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.mx sub, .tip sub, .step-t sub { font-size: 0.72em; vertical-align: -0.28em; line-height: 0; }
+.mx-inline { font-size: 0.92em; padding: 0 0.1em; color: var(--ink); white-space: nowrap; }
+button, [role="button"] { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+/* Pestañas */
+.tabs { display: flex; gap: 6px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs button { flex: 1 0 auto; scroll-snap-align: start; min-height: 46px; padding: 0 16px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; color: var(--muted); white-space: nowrap; transition: background .15s, color .15s; }
+.tabs button:hover { color: var(--ink); background: var(--surface2); }
+.tabs button.on { background: var(--accent); color: var(--accent-ink); }
+
+.seg { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 3px; background: var(--surface2); border: 1px solid var(--line); border-radius: 12px; }
+.seg button { min-height: 42px; padding: 0 14px; border-radius: 9px; font-size: 0.9rem; font-weight: 500; color: var(--muted); }
+.seg button.on { background: var(--surface); color: var(--ink); box-shadow: 0 0 0 1.5px var(--accent) inset; font-weight: 600; }
+.seg-sm button { min-height: 36px; padding: 0 11px; font-size: 0.82rem; }
+
+/* Paneles */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+.panel-toggle { min-height: 44px; }
+.chev { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--surface2); border: 1px solid var(--line); color: var(--muted); font-size: 1.1rem; transition: transform .2s; flex: none; }
+.chev.open { transform: rotate(90deg); }
+.chip { min-height: 38px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface2); font-size: 0.82rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+.chip:hover { color: var(--ink); }
+.chip.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+.circuit-card.stuck { position: sticky; top: 0; z-index: 30; border-top-left-radius: 0; border-top-right-radius: 0; }
+.circuit-card.stuck .circuit-svg { max-height: 36vh; }
+.svg-wrap { touch-action: manipulation; }
+@media (min-width: 1024px) {
+  .left-col { scrollbar-width: thin; }
+}
+
+/* Términos del glosario */
+.term { color: inherit; text-decoration: underline dotted var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; cursor: help; border-radius: 4px; }
+.term:hover { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.tip-card { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 14px; padding: 14px 16px 14px; box-shadow: 0 18px 50px rgba(10, 20, 40, 0.22); animation: tipin .14s ease-out; }
+.tip-x { width: 30px; height: 30px; border-radius: 8px; color: var(--muted); font-size: 1.2rem; line-height: 1; flex: none; }
+.tip-x:hover { background: var(--surface2); color: var(--ink); }
+.tip-block { border-left: 3px solid var(--c1); padding-left: 10px; }
+.tip-block-s { border-left-color: var(--c3); }
+.tip-label { font-family: var(--f-mono); font-size: 0.66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin-bottom: 2px; }
+@keyframes tipin { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* SVG */
+.svg-label { font-family: var(--f-mono); font-size: 14px; fill: var(--ink); }
+.svg-name { font-weight: 600; font-size: 15px; }
+.svg-val { fill: var(--muted); font-size: 13.5px; }
+.svg-curr { font-family: var(--f-mono); font-size: 12.5px; fill: var(--flow); font-weight: 600; }
+.svg-sign { font-family: var(--f-mono); font-size: 17px; font-weight: 600; fill: var(--wire); }
+.svg-mesh-label { font-family: var(--f-mono); font-size: 13px; font-weight: 600; }
+.svg-super { font-family: var(--f-body); font-size: 13px; font-weight: 600; letter-spacing: .02em; }
+.svg-badge { font-family: var(--f-mono); font-size: 12.5px; font-weight: 600; }
+.svg-term { font-family: var(--f-mono); font-size: 15px; font-weight: 600; fill: var(--accent); }
+.chart-t { font-family: var(--f-mono); font-size: 10.5px; fill: var(--muted); }
+@media (max-width: 640px) {
+  .svg-name { font-size: 18px; } .svg-val { font-size: 16px; } .svg-label { font-size: 16px; }
+  .svg-mesh-label { font-size: 15px; } .svg-badge { font-size: 14px; } .svg-term { font-size: 17px; } .svg-super { font-size: 14px; } .svg-curr { font-size: 14px; }
+}
+.glow-wire { fill: none; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; opacity: 0.75; }
+.region-on { transition: fill-opacity .2s; }
+.comp.clickable { cursor: pointer; }
+.comp.clickable:hover path, .comp.clickable:hover circle { stroke: var(--accent); }
+.mesh-arrow { opacity: .75; transition: opacity .2s; }
+.mesh-arrow.strong { opacity: 1; }
+.mesh-arrow.strong path { animation: spin-dash 1.2s linear infinite; stroke-dasharray: 6 4; }
+.flow { fill: none; stroke: var(--flow); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 0.1 16; animation-name: flowmove; animation-timing-function: linear; animation-iteration-count: infinite; filter: drop-shadow(0 0 2px var(--flow)); }
+@keyframes flowmove { to { stroke-dashoffset: -16.1; } }
+@keyframes spin-dash { to { stroke-dashoffset: -20; } }
+.legend-flow { display: inline-flex; gap: 4px; }
+.legend-flow i { width: 6px; height: 6px; border-radius: 50%; background: var(--flow); animation: blink 1.2s infinite; }
+.legend-flow i:nth-child(2) { animation-delay: .2s; } .legend-flow i:nth-child(3) { animation-delay: .4s; }
+@keyframes blink { 50% { opacity: .25; } }
+.legend-chip { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1.5px solid color-mix(in srgb, var(--c) 45%, transparent); font-size: 0.82rem; font-weight: 600; color: var(--ink); background: var(--surface); }
+.legend-chip i { width: 10px; height: 10px; border-radius: 3px; background: var(--c); }
+.legend-chip.on { background: color-mix(in srgb, var(--c) 16%, var(--surface)); border-color: var(--c); }
+
+/* Controles */
+.ctl { padding: 10px 12px 6px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface2); transition: box-shadow .3s, border-color .3s; }
+.ctl.flash { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+.stepper { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font-size: 1.2rem; font-weight: 600; color: var(--ink); }
+.stepper:active { background: var(--line); }
+.num { width: 70px; height: 38px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); text-align: right; padding: 0 8px; font-family: var(--f-mono); font-size: 0.95rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.unit { font-family: var(--f-mono); font-size: 0.85rem; color: var(--muted); width: 14px; }
+.range { -webkit-appearance: none; appearance: none; width: 100%; height: 40px; background: transparent; cursor: pointer; margin: 2px 0 0; }
+.range::-webkit-slider-runnable-track { height: 6px; border-radius: 6px; background: linear-gradient(90deg, var(--accent) var(--pct), var(--line) var(--pct)); }
+.range::-moz-range-track { height: 6px; border-radius: 6px; background: var(--line); }
+.range::-moz-range-progress { height: 6px; border-radius: 6px; background: var(--accent); }
+.range::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -11px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); box-shadow: 0 2px 6px rgba(0,0,0,.18); }
+.range::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+
+/* Pasos */
+.steps { display: flex; flex-direction: column; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.step { display: flex; gap: 12px; padding: 11px 12px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; transition: border-color .15s, background .15s; }
+.step:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.step.on { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.step-n { flex: none; width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; font-family: var(--f-mono); font-weight: 600; font-size: .85rem; background: var(--surface2); border: 1px solid var(--line); color: var(--ink); }
+.step.on .step-n, .step.view-on .step-n { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.step-t { font-weight: 600; font-size: 0.95rem; color: var(--ink); line-height: 1.3; }
+.step-d { font-size: 0.89rem; color: var(--muted); line-height: 1.55; margin-top: 3px; max-width: 68ch; }
+.insight { font-size: 0.88rem; line-height: 1.55; color: var(--ink); border-left: 3px solid var(--sup); padding: 8px 12px; background: color-mix(in srgb, var(--sup) 7%, var(--surface)); border-radius: 0 10px 10px 0; }
+
+/* Ecuaciones */
+.eq { padding: 11px 13px 12px; border-radius: 14px; border: 1px solid var(--line); border-left: 4px solid var(--hl); background: var(--surface); cursor: pointer; transition: background .15s, box-shadow .15s; }
+.eq:hover, .eq.on { background: color-mix(in srgb, var(--hl) 8%, var(--surface)); }
+.eq.on { box-shadow: 0 0 0 1.5px var(--hl); }
+.row-dot { width: 22px; height: 22px; border-radius: 7px; display: grid; place-items: center; font-family: var(--f-mono); font-size: .75rem; font-weight: 600; background: var(--hl); color: var(--surface); }
+.tag { font-family: var(--f-mono); font-size: .7rem; font-weight: 600; letter-spacing: .04em; padding: 3px 8px; border-radius: 6px; }
+.tag-lvk { background: color-mix(in srgb, var(--c1) 15%, transparent); color: var(--c1); }
+.tag-lck { background: color-mix(in srgb, var(--c3) 15%, transparent); color: var(--c3); }
+.tag-res { background: color-mix(in srgb, var(--sup) 16%, transparent); color: var(--sup); }
+.eq-lines { display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; align-items: baseline; }
+.eq-k { font-family: var(--f-mono); font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.eq-v { font-size: .86rem; color: var(--ink); overflow-wrap: anywhere; line-height: 1.5; }
+.eq-final { font-weight: 600; color: var(--ink); }
+@media (max-width: 420px) { .eq-lines { grid-template-columns: 1fr; gap: 0; } .eq-k { margin-top: 5px; } }
+
+/* Matrices */
+.matrix-eq { display: inline-flex; align-items: center; gap: 10px; min-width: max-content; padding-top: 4px; }
+.mat-group { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.mat-cap { font-family: var(--f-mono); font-size: .72rem; color: var(--ink); font-weight: 600; }
+.op { font-family: var(--f-mono); font-size: 1.3rem; color: var(--muted); padding-top: 18px; }
+.mat { position: relative; display: grid; gap: 2px 4px; padding: 6px 12px; font-family: var(--f-mono); font-size: .86rem; font-variant-numeric: tabular-nums; }
+.mat::before, .mat::after { content: ''; position: absolute; top: 0; bottom: 0; width: 8px; border: 2px solid var(--ink); }
+.mat::before { left: 0; border-right: none; border-radius: 4px 0 0 4px; }
+.mat::after { right: 0; border-left: none; border-radius: 0 4px 4px 0; }
+.cell { padding: 5px 8px; text-align: right; border-radius: 7px; color: var(--ink); white-space: nowrap; transition: background .15s; }
+.cell.clickable { cursor: pointer; }
+.cell.clickable:hover { background: var(--surface2); }
+.cell.on { background: color-mix(in srgb, var(--hl, var(--accent)) 18%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--hl, var(--accent)) 50%, transparent) inset; }
+.expand { border-left: 3px solid var(--hl); padding: 8px 12px; background: var(--surface2); border-radius: 0 10px 10px 0; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface2); font-size: .82rem; color: var(--ink); }
+.pill-ok { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, transparent); background: color-mix(in srgb, var(--ok) 9%, var(--surface)); font-weight: 600; }
+.pill-bad { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 40%, transparent); font-weight: 600; }
+.ucard { text-align: left; padding: 10px 12px; border-radius: 14px; border: 1px solid var(--line); border-top: 3px solid var(--hl, var(--accent)); background: var(--surface); min-height: 44px; }
+.ucard:not(.static):hover, .ucard.on { background: color-mix(in srgb, var(--hl) 8%, var(--surface)); }
+.ucard.on { box-shadow: 0 0 0 1.5px var(--hl); }
+.verify { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.prose-w { max-width: 66ch; }
+
+/* Tabla */
+.tbl { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.tbl th { text-align: right; font-family: var(--f-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 500; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.tbl th:first-child, .tbl td:first-child { text-align: left; }
+.tbl td { text-align: right; padding: 7px 8px; border-bottom: 1px solid var(--line); font-family: var(--f-mono); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+.tbl td.neg { color: var(--sup); }
+.tbl tr:last-child td { border-bottom: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .flow { animation: none; stroke-dasharray: 0.1 12; }
+  .mesh-arrow.strong path { animation: none; }
+  .legend-flow i, .tip-card { animation: none; }
+  * { scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+(() => {
+  // model.js
+  var MINUS = "\u2212";
+  function fmt(v, d = 3) {
+    if (v === null || v === void 0 || !isFinite(v)) return "\u2014";
+    const p = Math.pow(10, d);
+    let r = Math.round(v * p) / p;
+    if (Math.abs(r) < 0.5 / p) r = 0;
+    let s = String(r);
+    if (s.includes("e")) s = v.toPrecision(3);
+    return s.replace("-", MINUS);
+  }
+  function fmtSig(v) {
+    if (!isFinite(v)) return "\u2014";
+    const a = Math.abs(v);
+    if (a < 1e-12) return "0";
+    const d = a >= 100 ? 1 : a >= 10 ? 2 : a >= 1 ? 3 : a >= 0.1 ? 4 : 5;
+    return fmt(v, d);
+  }
+  var f2 = (v) => fmt(v, 2);
+  var pm = (v) => (v < 0 ? ` ${MINUS} ` : " + ") + f2(Math.abs(v));
+  function invert(A) {
+    const n = A.length;
+    const M = A.map((row, i) => [...row, ...row.map((_, j) => i === j ? 1 : 0)]);
+    let det = 1;
+    for (let c = 0; c < n; c++) {
+      let p = c;
+      for (let r = c + 1; r < n; r++) if (Math.abs(M[r][c]) > Math.abs(M[p][c])) p = r;
+      if (Math.abs(M[p][c]) < 1e-12) return { inv: null, det: 0 };
+      if (p !== c) {
+        [M[p], M[c]] = [M[c], M[p]];
+        det = -det;
+      }
+      const pv = M[c][c];
+      det *= pv;
+      for (let j = 0; j < 2 * n; j++) M[c][j] /= pv;
+      for (let r = 0; r < n; r++) {
+        if (r === c) continue;
+        const f = M[r][c];
+        if (f !== 0) for (let j = 0; j < 2 * n; j++) M[r][j] -= f * M[c][j];
+      }
+    }
+    return { inv: M.map((r) => r.slice(n)), det };
+  }
+  var mv = (M, v) => M.map((r) => r.reduce((s, a, j) => s + a * v[j], 0));
+  function solve(A, B) {
+    const { inv, det } = invert(A);
+    if (!inv) return { inv: null, det: 0, x: A.map(() => NaN) };
+    return { inv, det, x: mv(inv, B) };
+  }
+  function rowMarkup(row, syms, b) {
+    let s = "";
+    let first = true;
+    row.forEach((a, j) => {
+      if (Math.abs(a) < 1e-12) return;
+      const mag = Math.abs(a);
+      const c = Math.abs(mag - 1) < 1e-12 ? "" : fmt(mag, 3) + "\xB7";
+      if (first) s += (a < 0 ? MINUS : "") + c + syms[j];
+      else s += (a < 0 ? ` ${MINUS} ` : " + ") + c + syms[j];
+      first = false;
+    });
+    return (s || "0") + " = " + fmt(b, 3);
+  }
+  var RMETA = { unit: "\u03A9", min: 0.5, max: 20, step: 0.5, term: "resistencia" };
+  var PM = {
+    V1: { label: "V_1", unit: "V", min: -24, max: 24, step: 0.5, def: 12, term: "voltaje", desc: "Fuente izquierda" },
+    V2: { label: "V_2", unit: "V", min: -24, max: 24, step: 0.5, def: 6, term: "voltaje", desc: "Fuente derecha" },
+    Vs: { label: "V_s", unit: "V", min: -24, max: 24, step: 0.5, def: 4, term: "voltaje", desc: "Fuente flotante entre nodos" },
+    Is: { label: "I_s", unit: "A", min: -5, max: 5, step: 0.1, def: 1.5, term: "corriente", desc: "Fuente de corriente" },
+    R1: { ...RMETA, label: "R_1", def: 4, desc: "Resistencia" },
+    R2: { ...RMETA, label: "R_2", def: 2, desc: "Resistencia" },
+    R3: { ...RMETA, label: "R_3", def: 6, desc: "Resistencia" },
+    R4: { ...RMETA, label: "R_4", def: 3, desc: "Resistencia" },
+    R5: { ...RMETA, label: "R_5", def: 2, desc: "Resistencia" },
+    RL: { ...RMETA, label: "R_L", def: 4, desc: "Resistencia de carga" }
+  };
+  var DEFAULTS = Object.fromEntries(Object.entries(PM).map(([k, m]) => [k, m.def]));
+  var MODES = [
+    { id: "mallas", tab: "mallas", label: "An\xE1lisis de mallas", short: "Mallas" },
+    { id: "nodos", tab: "nodos", label: "An\xE1lisis de nodos", short: "Nodos" },
+    { id: "supermalla", tab: "super", label: "Supermalla", short: "Supermalla" },
+    { id: "supernodo", tab: "super", label: "Supernodo", short: "Supernodo" },
+    { id: "thevenin", tab: "thevenin", label: "Equivalente de Th\xE9venin", short: "Th\xE9venin" },
+    { id: "norton", tab: "norton", label: "Equivalente de Norton", short: "Norton" }
+  ];
+  var X = [60, 200, 340, 480];
+  var YT = 60;
+  var YB = 240;
+  var COL = { c1: "var(--c1)", c2: "var(--c2)", c3: "var(--c3)", sup: "var(--sup)", ref: "var(--muted)", acc: "var(--accent)" };
+  var HALF = { R: 28, V: 20, I: 20, short: 0, open: 12 };
+  function compGeom(b, c) {
+    var _a;
+    const p = b.pts[c.seg], q = b.pts[c.seg + 1];
+    const dx = q[0] - p[0], dy = q[1] - p[1];
+    const L = Math.hypot(dx, dy) || 1;
+    const u = [dx / L, dy / L];
+    const cx = (p[0] + q[0]) / 2, cy = (p[1] + q[1]) / 2;
+    const h = (_a = HALF[c.type]) != null ? _a : 20;
+    return { cx, cy, u, ang: Math.atan2(dy, dx) * 180 / Math.PI, a: [cx - u[0] * h, cy - u[1] * h], b: [cx + u[0] * h, cy + u[1] * h] };
+  }
+  function branchPieces(b) {
+    const pieces = [];
+    let cur = [b.pts[0]];
+    let k = 0;
+    for (let i = 0; i < b.pts.length - 1; i++) {
+      const comp = (b.comps || []).find((c) => c.seg === i);
+      if (comp) {
+        const g = compGeom(b, comp);
+        cur.push(g.a);
+        pieces.push({ node: b.nodes[k], pts: cur });
+        k++;
+        cur = [g.b];
+      }
+      cur.push(b.pts[i + 1]);
+    }
+    pieces.push({ node: b.nodes[k], pts: cur });
+    return pieces;
+  }
+  var ohm = (v) => `${f2(v)} \u03A9`;
+  var volt = (v) => `${f2(v)} V`;
+  var amp = (v) => `${f2(v)} A`;
+  var Rc = (key, seg, lab, P) => ({ seg, type: "R", key, name: PM[key].label, val: ohm(P[key]), lab });
+  var Vc = (key, seg, lab, P, plusAt) => ({ seg, type: "V", key, name: PM[key].label, val: volt(P[key]), lab, plusAt });
+  var Ic = (key, seg, lab, P, dir) => ({ seg, type: "I", key, name: PM[key].label, val: amp(P[key]), lab, dir });
+  var meshHL = (key, i, color, label, branches) => ({
+    kind: "mesh",
+    key,
+    color,
+    label,
+    branches,
+    rect: [X[i] + 12, YT + 12, X[i + 1] - X[i] - 24, YB - YT - 24]
+  });
+  var nodeHL = (key, color, label, at, known = false) => ({ kind: "node", key, color, label, at, known });
+  var leftBranch = (P, nodes = ["g", "A", "n1"], v1off = false) => ({
+    id: "bV1",
+    pts: [[X[1], YB], [X[0], YB], [X[0], YT], [X[1], YT]],
+    comps: [
+      v1off ? { seg: 1, type: "short", key: "V1", name: "V_1", val: "\u2192 corto", lab: "left" } : Vc("V1", 1, "left", P, "end"),
+      Rc("R1", 2, "above", P)
+    ],
+    nodes
+  });
+  var bR3 = (P) => ({ id: "bR3", pts: [[X[1], YT], [X[1], YB]], comps: [Rc("R3", 0, "right", P)], nodes: ["n1", "g"] });
+  var bG = () => ({ id: "bG", pts: [[X[2], YB], [X[1], YB]], comps: [], nodes: ["g"] });
+  var DOTS = [[X[1], YT], [X[2], YT], [X[1], YB], [X[2], YB]];
+  var VB = "-24 18 608 268";
+  function ladderCircuit(P) {
+    return [
+      leftBranch(P),
+      bR3(P),
+      { id: "bR2", pts: [[X[1], YT], [X[2], YT]], comps: [Rc("R2", 0, "above", P)], nodes: ["n1", "n2"] },
+      { id: "bR4", pts: [[X[2], YT], [X[2], YB]], comps: [Rc("R4", 0, "right", P)], nodes: ["n2", "g"] },
+      { id: "bRt", pts: [[X[2], YT], [X[3], YT], [X[3], YB], [X[2], YB]], comps: [Rc("R5", 0, "above", P), Vc("V2", 1, "right", P, "start")], nodes: ["n2", "B", "g"] },
+      bG()
+    ];
+  }
+  var res = (name, I, R) => ({ name, kind: "R", I, V: I * R, P: I * I * R });
+  var src = (name, I, V, Pabs) => ({ name, kind: "S", I, V, P: Pabs });
+  function power(rows) {
+    const abs = rows.filter((r) => r.kind === "R").reduce((s, r) => s + r.P, 0);
+    const sup = -rows.filter((r) => r.kind === "S").reduce((s, r) => s + r.P, 0);
+    return { abs, sup };
+  }
+  function modelMallas(P) {
+    const { V1, V2, R1, R2, R3, R4, R5 } = P;
+    const A = [[R1 + R3, -R3, 0], [-R3, R2 + R3 + R4, -R4], [0, -R4, R4 + R5]];
+    const B = [V1, 0, -V2];
+    const sol = solve(A, B);
+    const [I1, I2, I3] = sol.x;
+    const rows = [
+      res("R_1", I1, R1),
+      res("R_2", I2, R2),
+      res("R_3", I1 - I2, R3),
+      res("R_4", I2 - I3, R4),
+      res("R_5", I3, R5),
+      src("V_1", I1, V1, -V1 * I1),
+      src("V_2", I3, V2, V2 * I3)
+    ];
+    return {
+      kind: "mesh",
+      params: ["V1", "V2", "R1", "R2", "R3", "R4", "R5"],
+      unknowns: [
+        { sym: "I_1", unit: "A", label: "Corriente de malla 1", focus: ["M1"] },
+        { sym: "I_2", unit: "A", label: "Corriente de malla 2", focus: ["M2"] },
+        { sym: "I_3", unit: "A", label: "Corriente de malla 3", focus: ["M3"] }
+      ],
+      units: { A: "\u03A9", x: "A", B: "V" },
+      A,
+      B,
+      ...sol,
+      Asym: [["R_1+R_3", "\u2212R_3", "0"], ["\u2212R_3", "R_2+R_3+R_4", "\u2212R_4"], ["0", "\u2212R_4", "R_4+R_5"]],
+      Bsym: ["V_1", "0", "\u2212V_2"],
+      eqs: [
+        { tag: "LVK", title: "Malla 1", focus: ["M1"], law: "R_1 I_1 + R_3(I_1 \u2212 I_2) = V_1", sub: `${f2(R1)}\xB7I_1 + ${f2(R3)}\xB7(I_1 \u2212 I_2) = ${f2(V1)}` },
+        { tag: "LVK", title: "Malla 2", focus: ["M2"], law: "R_3(I_2 \u2212 I_1) + R_2 I_2 + R_4(I_2 \u2212 I_3) = 0", sub: `${f2(R3)}\xB7(I_2 \u2212 I_1) + ${f2(R2)}\xB7I_2 + ${f2(R4)}\xB7(I_2 \u2212 I_3) = 0` },
+        { tag: "LVK", title: "Malla 3", focus: ["M3"], law: "R_4(I_3 \u2212 I_2) + R_5 I_3 + V_2 = 0", sub: `${f2(R4)}\xB7(I_3 \u2212 I_2) + ${f2(R5)}\xB7I_3${pm(V2)} = 0` }
+      ],
+      circuit: {
+        viewBox: VB,
+        branches: ladderCircuit(P),
+        highlights: [
+          meshHL("M1", 0, COL.c1, "I_1", ["bV1", "bR3"]),
+          meshHL("M2", 1, COL.c2, "I_2", ["bR3", "bR2", "bR4", "bG"]),
+          meshHL("M3", 2, COL.c3, "I_3", ["bR4", "bRt"])
+        ],
+        dots: DOTS,
+        ground: [130, YB]
+      },
+      currents: { bV1: I1, bR3: I1 - I2, bR2: I2, bR4: I2 - I3, bRt: I3, bG: I2 },
+      rows,
+      power: power(rows),
+      derived: [
+        { label: "Voltaje del nodo superior de R_3", expr: "v_1 = R_3(I_1 \u2212 I_2)", val: R3 * (I1 - I2), unit: "V" },
+        { label: "Voltaje del nodo superior de R_4", expr: "v_2 = R_4(I_2 \u2212 I_3)", val: R4 * (I2 - I3), unit: "V" }
+      ],
+      steps: [
+        { title: "Cuenta las ventanas", focus: ["M1", "M2", "M3"], text: "El circuito es plano y tiene 3 ventanas, as\xED que hay 3 [[malla|mallas]]. A cada una le asignamos una [[corriente|corriente]] de malla en sentido horario: $I_1$, $I_2$, $I_3$. Esas son las inc\xF3gnitas." },
+        { title: "LVK en la malla 1", focus: ["M1"], row: 0, text: "Recorre la malla en sentido horario aplicando la [[lvk|LVK]]. Al subir por $V_1$ de \u2212 a + ganas $V_1$. Por $R_3$ pasan $I_1$ hacia abajo e $I_2$ hacia arriba, as\xED que su corriente neta es $I_1 \u2212 I_2$." },
+        { title: "LVK en la malla 2", focus: ["M2"], row: 1, text: "La malla 2 comparte $R_3$ con la malla 1 y $R_4$ con la malla 3. En cada [[resistencia|resistencia]] compartida la corriente neta es la tuya menos la de la vecina." },
+        { title: "LVK en la malla 3", focus: ["M3"], row: 2, text: "Al bajar por $V_2$ de + a \u2212 pierdes $V_2$, por eso aparece como $\u2212V_2$ en el vector $B$. Pon $V_2$ negativo y mira c\xF3mo se invierte el flujo." },
+        { title: "Ensambla A\xB7x = B", focus: ["M1", "M2", "M3"], text: "Agrupa por inc\xF3gnita. La diagonal de $A$ es la suma de resistencias de cada malla; fuera de la diagonal va \u2212(resistencia compartida). Por eso $A$ es sim\xE9trica y, con resistencias positivas, siempre invertible." }
+      ],
+      insight: "Este circuito necesita 3 ecuaciones por mallas. En la pesta\xF1a Nodos el mismo circuito se resuelve con s\xF3lo 2: conviene elegir el m\xE9todo con menos inc\xF3gnitas."
+    };
+  }
+  function modelNodos(P) {
+    const { V1, V2, R1, R2, R3, R4, R5 } = P;
+    const G1 = 1 / R1, G2 = 1 / R2, G3 = 1 / R3, G4 = 1 / R4, G5 = 1 / R5;
+    const A = [[G1 + G2 + G3, -G2], [-G2, G2 + G4 + G5]];
+    const B = [V1 * G1, V2 * G5];
+    const sol = solve(A, B);
+    const [v1, v2] = sol.x;
+    const i1 = (V1 - v1) * G1, i3 = v1 * G3, i2 = (v1 - v2) * G2, i4 = v2 * G4, i5 = (v2 - V2) * G5;
+    const rows = [res("R_1", i1, R1), res("R_2", i2, R2), res("R_3", i3, R3), res("R_4", i4, R4), res("R_5", i5, R5), src("V_1", i1, V1, -V1 * i1), src("V_2", i5, V2, V2 * i5)];
+    return {
+      kind: "node",
+      params: ["V1", "V2", "R1", "R2", "R3", "R4", "R5"],
+      unknowns: [
+        { sym: "v_1", unit: "V", label: "Voltaje del nodo 1", focus: ["n1"] },
+        { sym: "v_2", unit: "V", label: "Voltaje del nodo 2", focus: ["n2"] }
+      ],
+      units: { A: "S", x: "V", B: "A" },
+      A,
+      B,
+      ...sol,
+      Asym: [["1/R_1+1/R_2+1/R_3", "\u22121/R_2"], ["\u22121/R_2", "1/R_2+1/R_4+1/R_5"]],
+      Bsym: ["V_1/R_1", "V_2/R_5"],
+      eqs: [
+        { tag: "LCK", title: "Nodo 1", focus: ["n1"], law: "(v_1 \u2212 V_1)/R_1 + v_1/R_3 + (v_1 \u2212 v_2)/R_2 = 0", sub: `(v_1 \u2212 ${f2(V1)})/${f2(R1)} + v_1/${f2(R3)} + (v_1 \u2212 v_2)/${f2(R2)} = 0` },
+        { tag: "LCK", title: "Nodo 2", focus: ["n2"], law: "(v_2 \u2212 v_1)/R_2 + v_2/R_4 + (v_2 \u2212 V_2)/R_5 = 0", sub: `(v_2 \u2212 v_1)/${f2(R2)} + v_2/${f2(R4)} + (v_2 \u2212 ${f2(V2)})/${f2(R5)} = 0` }
+      ],
+      circuit: {
+        viewBox: VB,
+        branches: ladderCircuit(P),
+        highlights: [
+          nodeHL("n1", COL.c1, "v_1", [X[1], YT]),
+          nodeHL("n2", COL.c2, "v_2", [X[2], YT]),
+          nodeHL("A", COL.ref, "V_1", [X[0], YT], true),
+          nodeHL("B", COL.ref, "V_2", [X[3], YT], true),
+          nodeHL("g", COL.c3, "0 V", [X[1] - 70, YB + 34], true)
+        ],
+        dots: DOTS,
+        ground: [130, YB]
+      },
+      currents: { bV1: i1, bR3: i3, bR2: i2, bR4: i4, bRt: i5, bG: i4 + i5 },
+      rows,
+      power: power(rows),
+      derived: [
+        { label: "Corriente por R_1 (= I_1 de mallas)", expr: "I_1 = (V_1 \u2212 v_1)/R_1", val: i1, unit: "A" },
+        { label: "Corriente por R_2 (= I_2 de mallas)", expr: "I_2 = (v_1 \u2212 v_2)/R_2", val: i2, unit: "A" },
+        { label: "Corriente por R_5 (= I_3 de mallas)", expr: "I_3 = (v_2 \u2212 V_2)/R_5", val: i5, unit: "A" }
+      ],
+      steps: [
+        { title: "Elige el nodo de referencia", focus: ["g"], text: "El riel inferior toca 4 elementos. Lo declaramos [[referencia|tierra]], con $v = 0$. Todos los dem\xE1s voltajes de [[nodo|nodo]] se miden contra \xE9l." },
+        { title: "Identifica los nodos conocidos", focus: ["A", "B"], text: "Los nodos de las esquinas est\xE1n amarrados a tierra por $V_1$ y $V_2$: sus voltajes son datos. S\xF3lo $v_1$ y $v_2$ son inc\xF3gnitas." },
+        { title: "LCK en el nodo 1", focus: ["n1"], row: 0, text: "Aplica la [[lck|LCK]]: suma las [[corriente|corrientes]] que salen del nodo 1 e iguala a cero. Por Ley de Ohm cada corriente es (diferencia de [[voltaje|voltaje]]) / [[resistencia|resistencia]]." },
+        { title: "LCK en el nodo 2", focus: ["n2"], row: 1, text: "Mismo procedimiento. El t\xE9rmino $(v_2 \u2212 v_1)/R_2$ aparece en ambas ecuaciones con signo opuesto: es la [[conductancia|conductancia]] compartida." },
+        { title: "Ensambla G\xB7v = I", focus: ["n1", "n2"], text: "La diagonal suma las conductancias $1/R$ que tocan cada nodo; fuera de la diagonal va \u2212(conductancia compartida). Es el mismo patr\xF3n sim\xE9trico de mallas, con $1/R$ en lugar de $R$." }
+      ],
+      insight: "Con mallas este circuito ped\xEDa 3 ecuaciones; con nodos s\xF3lo 2. Las corrientes que salen de aqu\xED coinciden con las de la pesta\xF1a Mallas."
+    };
+  }
+  function modelSupermalla(P) {
+    const { V1, Is, R1, R2, R3, R4, R5 } = P;
+    const A = [[R1 + R3, -R3, 0], [-R3, R2 + R3, R4 + R5], [0, -1, 1]];
+    const B = [V1, 0, Is];
+    const sol = solve(A, B);
+    const [I1, I2, I3] = sol.x;
+    const vIs = I3 * (R4 + R5);
+    const rows = [res("R_1", I1, R1), res("R_2", I2, R2), res("R_3", I1 - I2, R3), res("R_4", I3, R4), res("R_5", I3, R5), src("V_1", I1, V1, -V1 * I1), src("I_s", I3 - I2, vIs, -vIs * (I3 - I2))];
+    return {
+      kind: "mesh",
+      params: ["V1", "Is", "R1", "R2", "R3", "R4", "R5"],
+      unknowns: [
+        { sym: "I_1", unit: "A", label: "Corriente de malla 1", focus: ["M1"] },
+        { sym: "I_2", unit: "A", label: "Corriente de malla 2", focus: ["M2", "SM"] },
+        { sym: "I_3", unit: "A", label: "Corriente de malla 3", focus: ["M3", "SM"] }
+      ],
+      units: { A: "\u03A9 / adim.", x: "A", B: "V / A" },
+      A,
+      B,
+      ...sol,
+      Asym: [["R_1+R_3", "\u2212R_3", "0"], ["\u2212R_3", "R_2+R_3", "R_4+R_5"], ["0", "\u22121", "1"]],
+      Bsym: ["V_1", "0", "I_s"],
+      eqs: [
+        { tag: "LVK", title: "Malla 1", focus: ["M1"], law: "R_1 I_1 + R_3(I_1 \u2212 I_2) = V_1", sub: `${f2(R1)}\xB7I_1 + ${f2(R3)}\xB7(I_1 \u2212 I_2) = ${f2(V1)}` },
+        { tag: "LVK", title: "Supermalla (2 + 3)", focus: ["SM"], law: "R_3(I_2 \u2212 I_1) + R_2 I_2 + R_5 I_3 + R_4 I_3 = 0", sub: `${f2(R3)}\xB7(I_2 \u2212 I_1) + ${f2(R2)}\xB7I_2 + ${f2(R5)}\xB7I_3 + ${f2(R4)}\xB7I_3 = 0` },
+        { tag: "Restricci\xF3n", title: "Fuente de corriente", focus: ["bIs", "M2", "M3"], law: "I_3 \u2212 I_2 = I_s", sub: `I_3 \u2212 I_2 = ${f2(Is)}` }
+      ],
+      circuit: {
+        viewBox: VB,
+        branches: [
+          leftBranch(P),
+          bR3(P),
+          { id: "bR2", pts: [[X[1], YT], [X[2], YT]], comps: [Rc("R2", 0, "above", P)], nodes: ["n1", "n2"] },
+          { id: "bIs", pts: [[X[2], YB], [X[2], YT]], comps: [Ic("Is", 0, "right", P, "forward")], nodes: ["g", "n2"] },
+          { id: "bRt", pts: [[X[2], YT], [X[3], YT], [X[3], YB], [X[2], YB]], comps: [Rc("R5", 0, "above", P), Rc("R4", 1, "right", P)], nodes: ["n2", "B", "g"] },
+          bG()
+        ],
+        highlights: [
+          { kind: "super", key: "SM", color: COL.sup, label: "Supermalla", rect: [X[1] + 6, YT + 6, X[3] - X[1] - 12, YB - YT - 12], branches: ["bR3", "bR2", "bRt", "bG"], exclude: ["bIs"] },
+          meshHL("M1", 0, COL.c1, "I_1", ["bV1", "bR3"]),
+          meshHL("M2", 1, COL.c2, "I_2", ["bR3", "bR2", "bIs", "bG"]),
+          meshHL("M3", 2, COL.c3, "I_3", ["bIs", "bRt"]),
+          { kind: "branch", key: "bIs", color: COL.sup, branches: ["bIs"] }
+        ],
+        dots: DOTS,
+        ground: [130, YB]
+      },
+      currents: { bV1: I1, bR3: I1 - I2, bR2: I2, bIs: I3 - I2, bRt: I3, bG: I2 },
+      rows,
+      power: power(rows),
+      derived: [
+        { label: "Voltaje en la fuente de corriente", expr: "v_{Is} = (R_4 + R_5) I_3", val: vIs, unit: "V" },
+        { label: "Comprobaci\xF3n de la restricci\xF3n", expr: "I_3 \u2212 I_2", val: I3 - I2, unit: "A" }
+      ],
+      steps: [
+        { title: "Detecta la fuente de corriente compartida", focus: ["bIs"], text: "$I_s$ est\xE1 en la rama que separa la malla 2 de la malla 3. Su [[voltaje|voltaje]] es desconocido, as\xED que no podemos escribir la [[lvk|LVK]] de ninguna de esas dos mallas por separado." },
+        { title: "Escribe la ecuaci\xF3n de restricci\xF3n", focus: ["bIs", "M2", "M3"], row: 2, text: "La corriente de esa rama es la superposici\xF3n de las corrientes de malla: $I_3$ sube por ella (horario en la malla 3) e $I_2$ baja (horario en la malla 2). La flecha de $I_s$ apunta hacia arriba, as\xED que $I_3 \u2212 I_2 = I_s$. Es una [[restriccion|restricci\xF3n]], no una LVK." },
+        { title: "Fusiona las mallas 2 y 3", focus: ["SM"], text: "Borra mentalmente la rama de $I_s$. Queda un lazo m\xE1s grande, la [[supermalla|supermalla]]: $R_2$ \u2192 $R_5$ \u2192 $R_4$ \u2192 tierra \u2192 $R_3$. En ese recorrido s\xED conocemos todos los voltajes." },
+        { title: "LVK en la supermalla", focus: ["SM"], row: 1, text: "Recorre el per\xEDmetro exterior en sentido horario. En $R_2$ circula $I_2$; en $R_5$ y $R_4$ circula $I_3$; en $R_3$ la neta es $I_2 \u2212 I_1$. La fuente de corriente no aparece." },
+        { title: "LVK en la malla 1", focus: ["M1"], row: 0, text: "La malla 1 no toca la fuente de corriente: se trata de forma normal." },
+        { title: "Ensambla A\xB7x = B", focus: ["M1", "SM"], text: "Dos filas vienen de LVK (en \u03A9) y una de la restricci\xF3n (s\xF3lo \xB11). La matriz deja de ser sim\xE9trica, pero mientras $det(A) \u2260 0$ hay soluci\xF3n \xFAnica." }
+      ],
+      insight: "Sin supermalla tendr\xEDas 4 inc\xF3gnitas (3 corrientes + el voltaje de $I_s$). La supermalla elimina esa inc\xF3gnita extra y deja un sistema 3\xD73."
+    };
+  }
+  function modelSupernodo(P) {
+    const { V1, Vs, Is, R1, R3, R4, R5 } = P;
+    const G1 = 1 / R1, G3 = 1 / R3, G4 = 1 / R4, G5 = 1 / R5;
+    const A = [[G1 + G3, G4 + G5, -G5], [-1, 1, 0], [0, -G5, G5]];
+    const B = [V1 * G1, Vs, Is];
+    const sol = solve(A, B);
+    const [v1, v2, v3] = sol.x;
+    const i1 = (V1 - v1) * G1, i3 = v1 * G3, iVs = i1 - i3, i4 = v2 * G4, i5 = (v2 - v3) * G5;
+    const rows = [res("R_1", i1, R1), res("R_3", i3, R3), res("R_4", i4, R4), res("R_5", i5, R5), src("V_1", i1, V1, -V1 * i1), src("V_s", iVs, Vs, -Vs * iVs), src("I_s", Is, v3, -v3 * Is)];
+    return {
+      kind: "node",
+      params: ["V1", "Vs", "Is", "R1", "R3", "R4", "R5"],
+      unknowns: [
+        { sym: "v_1", unit: "V", label: "Voltaje del nodo 1", focus: ["n1", "SN"] },
+        { sym: "v_2", unit: "V", label: "Voltaje del nodo 2", focus: ["n2", "SN"] },
+        { sym: "v_3", unit: "V", label: "Voltaje del nodo 3", focus: ["n3"] }
+      ],
+      units: { A: "S / adim.", x: "V", B: "A / V" },
+      A,
+      B,
+      ...sol,
+      Asym: [["1/R_1+1/R_3", "1/R_4+1/R_5", "\u22121/R_5"], ["\u22121", "1", "0"], ["0", "\u22121/R_5", "1/R_5"]],
+      Bsym: ["V_1/R_1", "V_s", "I_s"],
+      eqs: [
+        { tag: "LCK", title: "Supernodo (1 + 2)", focus: ["SN"], law: "(v_1 \u2212 V_1)/R_1 + v_1/R_3 + v_2/R_4 + (v_2 \u2212 v_3)/R_5 = 0", sub: `(v_1 \u2212 ${f2(V1)})/${f2(R1)} + v_1/${f2(R3)} + v_2/${f2(R4)} + (v_2 \u2212 v_3)/${f2(R5)} = 0` },
+        { tag: "Restricci\xF3n", title: "Fuente de voltaje flotante", focus: ["bVs", "n1", "n2"], law: "v_2 \u2212 v_1 = V_s", sub: `v_2 \u2212 v_1 = ${f2(Vs)}` },
+        { tag: "LCK", title: "Nodo 3", focus: ["n3"], law: "(v_3 \u2212 v_2)/R_5 \u2212 I_s = 0", sub: `(v_3 \u2212 v_2)/${f2(R5)}${pm(-Is)} = 0` }
+      ],
+      circuit: {
+        viewBox: VB,
+        branches: [
+          leftBranch(P),
+          bR3(P),
+          { id: "bVs", pts: [[X[1], YT], [X[2], YT]], comps: [Vc("Vs", 0, "below", P, "end")], nodes: ["n1", "n2"] },
+          { id: "bR4", pts: [[X[2], YT], [X[2], YB]], comps: [Rc("R4", 0, "right", P)], nodes: ["n2", "g"] },
+          { id: "bRt", pts: [[X[2], YT], [X[3], YT], [X[3], YB], [X[2], YB]], comps: [Rc("R5", 0, "above", P), Ic("Is", 1, "right", P, "backward")], nodes: ["n2", "n3", "g"] },
+          bG()
+        ],
+        highlights: [
+          { kind: "super", key: "SN", color: COL.sup, label: "Supernodo", rect: [X[1] - 28, YT - 32, X[2] - X[1] + 56, 102], round: 30, branches: [], nodes: ["n1", "n2"], extraBranches: ["bVs"] },
+          nodeHL("n1", COL.c1, "v_1", [X[1], YT]),
+          nodeHL("n2", COL.c2, "v_2", [X[2], YT]),
+          nodeHL("n3", COL.c3, "v_3", [X[3], YT]),
+          nodeHL("A", COL.ref, "V_1", [X[0], YT], true),
+          nodeHL("g", COL.ref, "0 V", [X[1] - 70, YB + 34], true),
+          { kind: "branch", key: "bVs", color: COL.sup, branches: ["bVs"] }
+        ],
+        dots: DOTS,
+        ground: [130, YB]
+      },
+      currents: { bV1: i1, bR3: i3, bVs: iVs, bR4: i4, bRt: i5, bG: i4 + i5 },
+      rows,
+      power: power(rows),
+      derived: [
+        { label: "Corriente por la fuente flotante", expr: "I_{Vs} = (V_1 \u2212 v_1)/R_1 \u2212 v_1/R_3", val: iVs, unit: "A" },
+        { label: "Comprobaci\xF3n de la restricci\xF3n", expr: "v_2 \u2212 v_1", val: v2 - v1, unit: "V" }
+      ],
+      steps: [
+        { title: "Detecta la fuente de voltaje flotante", focus: ["bVs"], text: "$V_s$ conecta dos [[nodo|nodos]] que no son tierra. La [[corriente|corriente]] que la atraviesa no depende de su valor, as\xED que no podemos escribir su t\xE9rmino en la [[lck|LCK]] de los nodos 1 o 2." },
+        { title: "Escribe la ecuaci\xF3n de restricci\xF3n", focus: ["bVs", "n1", "n2"], row: 1, text: "La fuente fija la diferencia de potencial entre sus terminales. El + est\xE1 del lado del nodo 2, as\xED que $v_2 \u2212 v_1 = V_s$. Es una [[restriccion|restricci\xF3n]], no una LCK." },
+        { title: "Envuelve ambos nodos en un supernodo", focus: ["SN"], text: "Traza una superficie cerrada alrededor de los nodos 1, 2 y la fuente. La corriente desconocida de $V_s$ entra y sale de la burbuja, as\xED que se cancela: eso es el [[supernodo|supernodo]]." },
+        { title: "LCK en el supernodo", focus: ["SN"], row: 0, text: "Suma todas las corrientes que salen de la burbuja: por $R_1$, $R_3$, $R_4$ y $R_5$. Cada una se escribe con Ley de Ohm usando $v_1$ o $v_2$ seg\xFAn el lado de la burbuja." },
+        { title: "LCK en el nodo 3", focus: ["n3"], row: 2, text: "El nodo 3 es normal: lo que sale por $R_5$ hacia el nodo 2 lo inyecta la fuente $I_s$." },
+        { title: "Ensambla A\xB7x = B", focus: ["SN", "n3"], text: "Dos filas son LCK (en siemens) y una es la restricci\xF3n (\xB11). Igual que en la supermalla, la matriz pierde la simetr\xEDa pero sigue siendo invertible." }
+      ],
+      insight: "Sin supernodo tendr\xEDas 4 inc\xF3gnitas (3 voltajes + la corriente de $V_s$). Encerrar la fuente en una burbuja elimina esa inc\xF3gnita extra."
+    };
+  }
+  function theveninCore(P) {
+    const { V1, Is, R1, R2, R3, RL } = P;
+    const G1 = 1 / R1, G2 = 1 / R2, G3 = 1 / R3, GL = 1 / RL;
+    const open = solve([[G1 + G2 + G3, -G2], [-G2, G2]], [V1 * G1, Is]);
+    const loaded = solve([[G1 + G2 + G3, -G2], [-G2, G2 + GL]], [V1 * G1, Is]);
+    const sc = solve([[G1 + G2 + G3, 0], [-G2, 1]], [V1 * G1, Is]);
+    const Vth = open.x[1];
+    const Rth = R2 + R1 * R3 / (R1 + R3);
+    const In = sc.x[1];
+    const IL = Vth / (Rth + RL);
+    return { G1, G2, G3, open, loaded, sc, Vth, Rth, In, IL, ILfull: loaded.x[1] / RL, VL: IL * RL, PL: IL * IL * RL, PLmax: Vth * Vth / (4 * Rth) };
+  }
+  function thOriginalCircuit(P, view) {
+    const off = view === "apagado";
+    const br = [
+      leftBranch(P, ["g", "A", "n1"], off),
+      bR3(P),
+      { id: "bR2", pts: [[X[1], YT], [X[2], YT]], comps: [Rc("R2", 0, "above", P)], nodes: ["n1", "n2"] },
+      { id: "bIs", pts: [[X[2], YB], [X[2], YT]], comps: [off ? { seg: 0, type: "open", key: "Is", name: "I_s", val: "\u2192 abierto", lab: "right" } : Ic("Is", 0, "right", P, "forward")], nodes: ["g", "n2"] },
+      bG()
+    ];
+    if (view === "original") br.push({ id: "bL", pts: [[X[2], YT], [X[3], YT], [X[3], YB], [X[2], YB]], comps: [Rc("RL", 1, "right", P)], nodes: ["n2", "g"] });
+    else if (view === "corto") br.push({ id: "bL", pts: [[X[2], YT], [X[3], YT], [X[3], YB], [X[2], YB]], comps: [{ seg: 1, type: "short", key: null, name: "corto", val: "a\u2013b", lab: "right" }], nodes: ["n2", "g"] });
+    else br.push({ id: "bTa", pts: [[X[2], YT], [410, YT]], comps: [], nodes: ["n2"] }, { id: "bTb", pts: [[410, YB], [X[2], YB]], comps: [], nodes: ["g"] });
+    return br;
+  }
+  function thHighlights() {
+    return [
+      nodeHL("n1", COL.c1, "v_1", [X[1], YT]),
+      nodeHL("n2", COL.c2, "v_2", [X[2], YT]),
+      { kind: "comp", key: "par", color: COL.c1, comps: ["R1", "R3"] },
+      { kind: "comp", key: "ser", color: COL.c2, comps: ["R2"] },
+      { kind: "comp", key: "cRL", color: COL.acc, comps: ["RL"] },
+      { kind: "term", key: "ab", color: COL.acc }
+    ];
+  }
+  function thCurrents(P, core, view) {
+    const { V1, Is } = P;
+    const { G1, G2, G3 } = core;
+    if (view === "apagado") return {};
+    if (view === "corto") {
+      const v12 = core.sc.x[0], Isc = core.sc.x[1];
+      return { bV1: (V1 - v12) * G1, bR3: v12 * G3, bR2: v12 * G2, bIs: Is, bL: Isc, bG: Isc - Is };
+    }
+    const s = view === "original" ? core.loaded : core.open;
+    const [v1, v2] = s.x;
+    const iL = view === "original" ? v2 / P.RL : 0;
+    return { bV1: (V1 - v1) * G1, bR3: v1 * G3, bR2: (v1 - v2) * G2, bIs: Is, bL: iL, bG: iL - Is };
+  }
+  function thEquivCircuit(P, core, kind) {
+    if (kind === "thevenin") {
+      return {
+        viewBox: VB,
+        branches: [
+          { id: "bTh", pts: [[X[2], YB], [130, YB], [130, YT], [X[2], YT]], comps: [{ seg: 1, type: "V", key: null, name: "V_{th}", val: volt(core.Vth), lab: "left", plusAt: "end" }, { seg: 2, type: "R", key: null, name: "R_{th}", val: ohm(core.Rth), lab: "above" }], nodes: ["g", "x", "n2"] },
+          { id: "bL", pts: [[X[2], YT], [X[3], YT], [X[3], YB], [X[2], YB]], comps: [Rc("RL", 1, "right", P)], nodes: ["n2", "g"] }
+        ],
+        highlights: [{ kind: "comp", key: "cRL", color: COL.acc, comps: ["RL"] }, { kind: "term", key: "ab", color: COL.acc }],
+        dots: [],
+        ground: [230, YB],
+        terminals: [[410, YT], [410, YB]]
+      };
+    }
+    return {
+      viewBox: VB,
+      branches: [
+        { id: "bIn", pts: [[270, YB], [130, YB], [130, YT], [270, YT]], comps: [{ seg: 1, type: "I", key: null, name: "I_N", val: amp(core.In), lab: "left", dir: "forward" }], nodes: ["g", "n2"] },
+        { id: "bRn", pts: [[270, YT], [270, YB]], comps: [{ seg: 0, type: "R", key: null, name: "R_N", val: ohm(core.Rth), lab: "right" }], nodes: ["n2", "g"] },
+        { id: "bL", pts: [[270, YT], [X[3], YT], [X[3], YB], [270, YB]], comps: [Rc("RL", 1, "right", P)], nodes: ["n2", "g"] }
+      ],
+      highlights: [{ kind: "comp", key: "cRL", color: COL.acc, comps: ["RL"] }, { kind: "term", key: "ab", color: COL.acc }],
+      dots: [[270, YT], [270, YB]],
+      ground: [200, YB],
+      terminals: [[390, YT], [390, YB]]
+    };
+  }
+  function modelThNo(P, view, kind) {
+    const core = theveninCore(P);
+    const { V1, Is, R1, R2, R3, RL } = P;
+    const isTh = kind === "thevenin";
+    const sol = isTh ? core.open : core.sc;
+    const circuit = view === "equivalente" ? thEquivCircuit(P, core, kind) : { viewBox: VB, branches: thOriginalCircuit(P, view), highlights: thHighlights(), dots: [[X[1], YT], [X[2], YT], [X[1], YB], [X[2], YB]], ground: [130, YB], terminals: [[410, YT], [410, YB]] };
+    let currents;
+    if (view === "equivalente") {
+      if (isTh) currents = { bTh: core.IL, bL: core.IL };
+      else {
+        const Rn = core.Rth;
+        currents = { bIn: core.In, bRn: core.In * RL / (Rn + RL), bL: core.In * Rn / (Rn + RL) };
+      }
+    } else currents = thCurrents(P, core, view);
+    const thEqs = [
+      { tag: "LCK", title: "Nodo 1", focus: ["n1"], law: "(v_1 \u2212 V_1)/R_1 + v_1/R_3 + (v_1 \u2212 v_2)/R_2 = 0", sub: `(v_1 \u2212 ${f2(V1)})/${f2(R1)} + v_1/${f2(R3)} + (v_1 \u2212 v_2)/${f2(R2)} = 0` },
+      { tag: "LCK", title: "Nodo 2 (a\u2013b abierto)", focus: ["n2", "ab"], law: "(v_2 \u2212 v_1)/R_2 \u2212 I_s = 0", sub: `(v_2 \u2212 v_1)/${f2(R2)}${pm(-Is)} = 0` }
+    ];
+    const noEqs = [
+      { tag: "LCK", title: "Nodo 1 (con v_2 = 0)", focus: ["n1"], law: "(v_1 \u2212 V_1)/R_1 + v_1/R_3 + v_1/R_2 = 0", sub: `(v_1 \u2212 ${f2(V1)})/${f2(R1)} + v_1/${f2(R3)} + v_1/${f2(R2)} = 0` },
+      { tag: "LCK", title: "Nodo 2 (a\u2013b en corto)", focus: ["n2", "ab"], law: "(0 \u2212 v_1)/R_2 \u2212 I_s + I_N = 0", sub: `\u2212v_1/${f2(R2)}${pm(-Is)} + I_N = 0` }
+    ];
+    const rthSub = `R_{th} = R_2 + R_1R_3/(R_1 + R_3) = ${f2(R2)} + ${f2(R1)}\xB7${f2(R3)}/${f2(R1 + R3)} = ${fmt(core.Rth, 3)} \u03A9`;
+    const thSteps = [
+      { title: "Retira la carga", view: "abierto", focus: ["ab"], text: "Desconecta $R_L$. Lo que queda es la red vista desde las terminales a\u2013b. El teorema de [[thevenin|Th\xE9venin]] dice que toda esa red se comporta como una fuente con una resistencia en serie." },
+      { title: "Calcula V_{th} en circuito abierto", view: "abierto", focus: ["n2"], row: 1, text: "Con a\u2013b abiertas resolvemos un sistema de [[nodo|nodos]] 2\xD72. El voltaje de circuito abierto es $V_{th} = v_2$." },
+      { title: "Apaga las fuentes independientes", view: "apagado", focus: [], text: "Una fuente de [[voltaje|voltaje]] apagada vale 0 V: se vuelve un corto. Una fuente de [[corriente|corriente]] apagada vale 0 A: se vuelve un circuito abierto. S\xF3lo quedan resistencias." },
+      { title: "Reduce la red a R_{th}", view: "apagado", focus: ["par", "ser"], text: "Desde a\u2013b ves $R_2$ en serie con el paralelo $R_1 \u2225 R_3$ (la fuente de corriente abierta no aporta camino)." },
+      { title: "Conecta la carga al equivalente", view: "equivalente", focus: ["cRL"], text: "Con el equivalente, la corriente de carga es un simple divisor: $I_L = V_{th}/(R_{th} + R_L)$. Comp\xE1rala con la del circuito original: es id\xE9ntica." }
+    ];
+    const noSteps = [
+      { title: "Cortocircuita a\u2013b", view: "corto", focus: ["ab"], text: "Para [[norton|Norton]] reemplazamos la carga por un cable. La corriente que circula por ese corto es $I_N$." },
+      { title: "Plantea el sistema con I_N como inc\xF3gnita", view: "corto", focus: ["n2"], row: 1, text: "El corto fuerza $v_2 = 0$. La corriente del corto entra al vector de inc\xF3gnitas junto con $v_1$: as\xED trabaja el an\xE1lisis nodal modificado que usan los simuladores tipo SPICE." },
+      { title: "Apaga las fuentes: R_N = R_{th}", view: "apagado", focus: ["par", "ser"], text: "Mismo procedimiento que en Th\xE9venin: corto en lugar de $V_1$, abierto en lugar de $I_s$. $R_N = R_2 + R_1 \u2225 R_3$." },
+      { title: "Conecta la carga al equivalente", view: "equivalente", focus: ["cRL"], text: "Fuente $I_N$ en paralelo con $R_N$. La carga recibe un divisor de corriente: $I_L = I_N R_N/(R_N + R_L)$. Adem\xE1s $V_{th} = I_N R_N$: es la transformaci\xF3n de fuentes." }
+    ];
+    const views = isTh ? [{ id: "original", label: "Con carga" }, { id: "abierto", label: "1 \xB7 V_{th}" }, { id: "apagado", label: "2 \xB7 R_{th}" }, { id: "equivalente", label: "3 \xB7 Equivalente" }] : [{ id: "original", label: "Con carga" }, { id: "corto", label: "1 \xB7 I_N" }, { id: "apagado", label: "2 \xB7 R_N" }, { id: "equivalente", label: "3 \xB7 Equivalente" }];
+    const ILn = core.In * core.Rth / (core.Rth + RL);
+    return {
+      kind: "node",
+      isThNo: kind,
+      params: ["V1", "Is", "R1", "R2", "R3", "RL"],
+      views,
+      unknowns: isTh ? [{ sym: "v_1", unit: "V", label: "Nodo 1 (abierto)", focus: ["n1"] }, { sym: "v_2", unit: "V", label: "Nodo 2 = V_th", focus: ["n2"] }] : [{ sym: "v_1", unit: "V", label: "Nodo 1 (en corto)", focus: ["n1"] }, { sym: "I_N", unit: "A", label: "Corriente de corto", focus: ["ab"] }],
+      units: isTh ? { A: "S", x: "V", B: "A" } : { A: "S / adim.", x: "V, A", B: "A" },
+      A: isTh ? [[core.G1 + core.G2 + core.G3, -core.G2], [-core.G2, core.G2]] : [[core.G1 + core.G2 + core.G3, 0], [-core.G2, 1]],
+      B: [V1 * core.G1, Is],
+      ...sol,
+      Asym: isTh ? [["1/R_1+1/R_2+1/R_3", "\u22121/R_2"], ["\u22121/R_2", "1/R_2"]] : [["1/R_1+1/R_2+1/R_3", "0"], ["\u22121/R_2", "1"]],
+      Bsym: ["V_1/R_1", "I_s"],
+      eqs: isTh ? thEqs : noEqs,
+      circuit,
+      currents,
+      th: {
+        ...core,
+        rthSub,
+        ILn,
+        cards: isTh ? [
+          { sym: "V_{th}", val: core.Vth, unit: "V", note: "v_2 en circuito abierto" },
+          { sym: "R_{th}", val: core.Rth, unit: "\u03A9", note: "R_2 + R_1 \u2225 R_3" },
+          { sym: "I_L", val: core.IL, unit: "A", note: "V_{th}/(R_{th} + R_L)" },
+          { sym: "P_L", val: core.PL, unit: "W", note: "I_L\xB2 R_L" }
+        ] : [
+          { sym: "I_N", val: core.In, unit: "A", note: "corriente de corto a\u2013b" },
+          { sym: "R_N", val: core.Rth, unit: "\u03A9", note: "igual a R_{th}" },
+          { sym: "I_L", val: ILn, unit: "A", note: "I_N R_N/(R_N + R_L)" },
+          { sym: "V_{th}", val: core.In * core.Rth, unit: "V", note: "I_N R_N" }
+        ]
+      },
+      steps: isTh ? thSteps : noSteps,
+      insight: isTh ? "El equivalente reduce un sistema 2\xD72 a una sola ecuaci\xF3n para cualquier carga. Cambia $R_L$: s\xF3lo cambia $I_L$; $V_{th}$ y $R_{th}$ son propiedades de la red." : "Norton y Th\xE9venin son la misma red vista de dos formas. Pasar de una a otra es una transformaci\xF3n de fuentes: $V_{th} = I_N\xB7R_N$."
+    };
+  }
+  function buildModel(mode, P, view) {
+    switch (mode) {
+      case "mallas":
+        return modelMallas(P);
+      case "nodos":
+        return modelNodos(P);
+      case "supermalla":
+        return modelSupermalla(P);
+      case "supernodo":
+        return modelSupernodo(P);
+      case "thevenin":
+        return modelThNo(P, view || "original", "thevenin");
+      case "norton":
+        return modelThNo(P, view || "original", "norton");
+      default:
+        return modelMallas(P);
+    }
+  }
+
+  // app.jsx
+  var { useState, useMemo, useEffect, useRef, useCallback, createContext, useContext } = React;
+  var GLOSSARY = {
+    corriente: { t: "Corriente (I)", d: "Flujo neto de carga que atraviesa una secci\xF3n por unidad de tiempo: I = dq/dt. Se mide en amperes (1 A = 1 C/s).", i: "Piensa en el caudal de una tuber\xEDa: cu\xE1nta carga pasa cada segundo. El signo depende de la flecha de referencia que elijas; un resultado negativo s\xF3lo significa que fluye al rev\xE9s de tu flecha.", s: "En un inductor la corriente es variable de estado: no puede saltar de golpe." },
+    voltaje: { t: "Voltaje (V)", d: "Diferencia de potencial el\xE9ctrico entre dos puntos: energ\xEDa por unidad de carga, en volts (1 V = 1 J/C).", i: 'Es la diferencia de presi\xF3n o de altura que empuja a la carga. Siempre se mide entre dos puntos; "el voltaje de un nodo" significa respecto a tierra.', s: "En un capacitor el voltaje es variable de estado: guarda energ\xEDa \xBDCV\xB2." },
+    resistencia: { t: "Resistencia (R)", d: "Oposici\xF3n al paso de corriente. En un resistor lineal V = R\xB7I (Ley de Ohm), en ohms (\u03A9). Disipa potencia P = I\xB2R como calor.", i: "Una tuber\xEDa angosta o la fricci\xF3n. Su inverso G = 1/R es la conductancia: qu\xE9 tan f\xE1cil pasa la corriente.", s: "Es el amortiguador del sistema: el t\xE9rmino que disipa energ\xEDa, como b\xB7\u1E8B en un masa-resorte." },
+    malla: { t: "Malla", d: 'Lazo cerrado de un circuito plano que no encierra otros lazos: cada "ventana" del dibujo.', i: "Asignas una corriente que gira por cada ventana. La corriente real de una rama compartida es la resta de las dos corrientes que la recorren.", s: "Elegir corrientes de malla es elegir una base del espacio de corrientes que ya cumple LCK autom\xE1ticamente." },
+    nodo: { t: "Nodo", d: "Punto donde se unen dos o m\xE1s elementos. Todo el cable que lo forma est\xE1 al mismo potencial.", i: "Un cruce de tuber\xEDas: lo que entra tiene que salir, porque la carga no se acumula en un cable.", s: "Los voltajes de nodo son coordenadas que cumplen LVK autom\xE1ticamente; s\xF3lo falta imponer LCK." },
+    supermalla: { t: "Supermalla", d: "Lazo formado al unir dos mallas que comparten una fuente de corriente.", i: 'No conoces el voltaje de la fuente de corriente, as\xED que "borras" su rama y aplicas LVK al lazo exterior. La fuente aporta una ecuaci\xF3n extra: la diferencia de corrientes de malla es igual a I_s.', s: "Es una restricci\xF3n lineal que reduce los grados de libertad del sistema." },
+    supernodo: { t: "Supernodo", d: "Superficie cerrada que envuelve una fuente de voltaje conectada entre dos nodos que no son tierra, junto con esos dos nodos.", i: "No conoces la corriente por la fuente, as\xED que la encierras en una burbuja y aplicas LCK a la burbuja completa. La fuente aporta la restricci\xF3n v\u208A \u2212 v\u208B = V_s.", s: "Igual que la supermalla: una ecuaci\xF3n algebraica de restricci\xF3n que acompa\xF1a a las de balance." },
+    lvk: { t: "Ley de Voltajes de Kirchhoff (LVK)", d: "La suma algebraica de voltajes en cualquier lazo cerrado es cero.", i: 'Si das una vuelta completa y regresas al mismo punto, regresas a la misma "altura": la energ\xEDa por unidad de carga se conserva.' },
+    lck: { t: "Ley de Corrientes de Kirchhoff (LCK)", d: "La suma de corrientes que salen de un nodo (o de cualquier superficie cerrada) es cero.", i: 'Conservaci\xF3n de la carga: lo que entra, sale. Por eso tambi\xE9n vale para la "burbuja" de un supernodo.' },
+    conductancia: { t: "Conductancia (G = 1/R)", d: "Inverso de la resistencia, en siemens (S). En an\xE1lisis nodal la matriz A es una matriz de conductancias.", i: "Mide la facilidad de paso. Resistencias en paralelo suman conductancias." },
+    referencia: { t: "Nodo de referencia (tierra)", d: "Nodo al que asignamos 0 V. Todos los voltajes de nodo se miden contra \xE9l.", i: "Como elegir el nivel del mar para medir alturas: cualquier elecci\xF3n sirve, s\xF3lo cambia el punto de partida." },
+    restriccion: { t: "Ecuaci\xF3n de restricci\xF3n", d: "Ecuaci\xF3n que impone una fuente sobre las inc\xF3gnitas sin pasar por la Ley de Ohm: I\u2083 \u2212 I\u2082 = I_s o v\u2082 \u2212 v\u2081 = V_s.", i: "No es una ley de balance, es un dato del circuito. En la matriz aparece como una fila de 1 y \u22121.", s: "An\xE1loga a una restricci\xF3n holon\xF3mica en mec\xE1nica: liga dos coordenadas." },
+    thevenin: { t: "Teorema de Th\xE9venin", d: "Toda red lineal vista desde dos terminales equivale a una fuente V_{th} en serie con una resistencia R_{th}.", i: 'A la carga no le importa qu\xE9 hay dentro de la red: s\xF3lo "siente" V_{th} y R_{th}.', s: "Es una reducci\xF3n de orden: todo el sistema se resume en una relaci\xF3n entrada-salida en el puerto a\u2013b." },
+    norton: { t: "Teorema de Norton", d: "La misma red equivale a una fuente de corriente I_N en paralelo con R_N = R_{th}.", i: "Es la versi\xF3n dual de Th\xE9venin. Se pasa de uno al otro con V_{th} = I_N\xB7R_N." },
+    inversa: { t: "Matriz inversa A\u207B\xB9", d: "La matriz que cumple A\u207B\xB9A = I. Si det(A) \u2260 0, la \xFAnica soluci\xF3n es x = A\u207B\xB9B.", i: "La columna j de A\u207B\xB9 dice c\xF3mo responde cada inc\xF3gnita a una fuente unitaria en la ecuaci\xF3n j: es una matriz de ganancias.", s: "En estado estacionario, A\u207B\xB9B es la respuesta del sistema a la entrada constante B." },
+    determinante: { t: "Determinante", d: "N\xFAmero que indica si A es invertible. det(A) = 0 significa ecuaciones dependientes: el circuito no tendr\xEDa soluci\xF3n \xFAnica.", i: "Con resistencias positivas y un circuito bien conectado, det(A) nunca es cero." }
+  };
+  var GlossaryCtx = createContext(null);
+  function GlossaryProvider({ children }) {
+    const [tip, setTip] = useState(null);
+    const timer = useRef(null);
+    const show = useCallback((k, el) => {
+      clearTimeout(timer.current);
+      if (!el) return;
+      setTip({ k, rect: el.getBoundingClientRect() });
+    }, []);
+    const hideSoon = useCallback(() => {
+      clearTimeout(timer.current);
+      timer.current = setTimeout(() => setTip(null), 160);
+    }, []);
+    const keep = useCallback(() => clearTimeout(timer.current), []);
+    const toggle = useCallback((k, el) => {
+      setTip((t) => t && t.k === k ? null : { k, rect: el.getBoundingClientRect() });
+    }, []);
+    const close = useCallback(() => setTip(null), []);
+    useEffect(() => {
+      const onDown = (e) => {
+        if (e.target.closest && (e.target.closest(".term") || e.target.closest(".tip"))) return;
+        setTip(null);
+      };
+      const onScroll = () => setTip(null);
+      document.addEventListener("pointerdown", onDown);
+      window.addEventListener("scroll", onScroll, { passive: true, capture: true });
+      window.addEventListener("resize", onScroll);
+      return () => {
+        document.removeEventListener("pointerdown", onDown);
+        window.removeEventListener("scroll", onScroll, { capture: true });
+        window.removeEventListener("resize", onScroll);
+      };
+    }, []);
+    return /* @__PURE__ */ React.createElement(GlossaryCtx.Provider, { value: { show, hideSoon, toggle, keep, close } }, children, tip && /* @__PURE__ */ React.createElement(TipCard, { tip, onEnter: keep, onLeave: hideSoon, onClose: close }));
+  }
+  function TipCard({ tip, onEnter, onLeave, onClose }) {
+    const g = GLOSSARY[tip.k];
+    if (!g) return null;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const w = Math.min(330, vw - 24);
+    const left = Math.max(12, Math.min(tip.rect.left + tip.rect.width / 2 - w / 2, vw - w - 12));
+    const below = tip.rect.bottom + 260 < vh || tip.rect.top < 260;
+    const style = below ? { left, width: w, top: tip.rect.bottom + 8 } : { left, width: w, bottom: vh - tip.rect.top + 8 };
+    return /* @__PURE__ */ React.createElement("div", { className: "tip fixed z-50", style, role: "tooltip", onMouseEnter: onEnter, onMouseLeave: onLeave }, /* @__PURE__ */ React.createElement("div", { className: "tip-card" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-start justify-between gap-3" }, /* @__PURE__ */ React.createElement("p", { className: "font-display text-[1.05rem] leading-tight text-ink" }, g.t), /* @__PURE__ */ React.createElement("button", { type: "button", className: "tip-x", "aria-label": "Cerrar definici\xF3n", onClick: onClose }, "\xD7")), /* @__PURE__ */ React.createElement("p", { className: "mt-2 text-[0.9rem] leading-relaxed text-ink" }, /* @__PURE__ */ React.createElement(Sub, { s: g.d })), /* @__PURE__ */ React.createElement("div", { className: "mt-3 tip-block" }, /* @__PURE__ */ React.createElement("p", { className: "tip-label" }, "Intuici\xF3n"), /* @__PURE__ */ React.createElement("p", { className: "text-[0.86rem] leading-relaxed text-muted" }, /* @__PURE__ */ React.createElement(Sub, { s: g.i }))), g.s && /* @__PURE__ */ React.createElement("div", { className: "mt-2 tip-block tip-block-s" }, /* @__PURE__ */ React.createElement("p", { className: "tip-label" }, "En sistemas din\xE1micos"), /* @__PURE__ */ React.createElement("p", { className: "text-[0.86rem] leading-relaxed text-muted" }, /* @__PURE__ */ React.createElement(Sub, { s: g.s })))));
+  }
+  function Term({ k, children }) {
+    var _a;
+    const ctx = useContext(GlossaryCtx);
+    const ref = useRef(null);
+    const canHover = useRef(typeof window !== "undefined" && window.matchMedia && window.matchMedia("(hover: hover)").matches);
+    return /* @__PURE__ */ React.createElement(
+      "span",
+      {
+        ref,
+        className: "term",
+        role: "button",
+        tabIndex: 0,
+        "aria-label": `Definici\xF3n de ${((_a = GLOSSARY[k]) == null ? void 0 : _a.t) || k}`,
+        onMouseEnter: () => canHover.current && ctx.show(k, ref.current),
+        onMouseLeave: () => canHover.current && ctx.hideSoon(),
+        onClick: (e) => {
+          e.stopPropagation();
+          ctx.toggle(k, ref.current);
+        },
+        onKeyDown: (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            e.stopPropagation();
+            ctx.toggle(k, ref.current);
+          }
+          if (e.key === "Escape") ctx.close();
+        }
+      },
+      children
+    );
+  }
+  function parseMath(s) {
+    var _a;
+    const out = [];
+    const re = /([A-Za-zΩ])_(\{([^}]*)\}|([A-Za-z0-9]))/g;
+    let last = 0, m;
+    while (m = re.exec(s)) {
+      if (m.index > last) out.push({ t: "x", s: s.slice(last, m.index) });
+      out.push({ t: "x", s: m[1] });
+      out.push({ t: "sub", s: (_a = m[3]) != null ? _a : m[4] });
+      last = re.lastIndex;
+    }
+    if (last < s.length) out.push({ t: "x", s: s.slice(last) });
+    return out;
+  }
+  function Mx({ s, className = "" }) {
+    return /* @__PURE__ */ React.createElement("span", { className: `mx ${className}` }, parseMath(String(s)).map((p, i) => p.t === "sub" ? /* @__PURE__ */ React.createElement("sub", { key: i }, p.s) : /* @__PURE__ */ React.createElement(React.Fragment, { key: i }, p.s)));
+  }
+  function Sub({ s }) {
+    return parseMath(String(s)).map((p, i) => p.t === "sub" ? /* @__PURE__ */ React.createElement("sub", { key: i }, p.s) : /* @__PURE__ */ React.createElement(React.Fragment, { key: i }, p.s));
+  }
+  function SvgMx({ s }) {
+    const parts = parseMath(String(s));
+    let prevSub = false;
+    return parts.map((p, i) => {
+      if (p.t === "sub") {
+        prevSub = true;
+        return /* @__PURE__ */ React.createElement("tspan", { key: i, dy: "4", fontSize: "0.72em" }, p.s);
+      }
+      const dy = prevSub ? -4 : void 0;
+      prevSub = false;
+      return /* @__PURE__ */ React.createElement("tspan", { key: i, dy }, p.s);
+    });
+  }
+  function Rich({ text }) {
+    const parts = text.split(/(\[\[[^\]]+\]\]|\$[^$]+\$)/g).filter(Boolean);
+    return parts.map((p, i) => {
+      if (p.startsWith("[[")) {
+        const [k, label] = p.slice(2, -2).split("|");
+        return /* @__PURE__ */ React.createElement(Term, { key: i, k }, label || k);
+      }
+      if (p.startsWith("$")) return /* @__PURE__ */ React.createElement(Mx, { key: i, s: p.slice(1, -1), className: "mx-inline" });
+      return /* @__PURE__ */ React.createElement(React.Fragment, { key: i }, p);
+    });
+  }
+  var ptsD = (pts) => pts.map((p, i) => `${i ? "L" : "M"}${p[0]} ${p[1]}`).join(" ");
+  var ZIG = "M-28 0 L-20 0 L-16.7 -8 L-10 8 L-3.3 -8 L3.3 8 L10 -8 L16.7 8 L20 0 L28 0";
+  function MeshArrow({ cx, cy, color, label, strong }) {
+    const r = 17;
+    const a0 = 120 * Math.PI / 180, a1 = 60 * Math.PI / 180;
+    const sx = cx + r * Math.cos(a0), sy = cy + r * Math.sin(a0);
+    const ex = cx + r * Math.cos(a1), ey = cy + r * Math.sin(a1);
+    const tx = -Math.sin(a1), ty = Math.cos(a1);
+    const nx = -ty, ny = tx;
+    const hp = `${ex + tx * 7},${ey + ty * 7} ${ex - nx * 5},${ey - ny * 5} ${ex + nx * 5},${ey + ny * 5}`;
+    return /* @__PURE__ */ React.createElement("g", { className: strong ? "mesh-arrow strong" : "mesh-arrow" }, /* @__PURE__ */ React.createElement("path", { d: `M${sx} ${sy} A${r} ${r} 0 1 1 ${ex} ${ey}`, fill: "none", stroke: color, strokeWidth: "2.4" }), /* @__PURE__ */ React.createElement("polygon", { points: hp, fill: color }), /* @__PURE__ */ React.createElement("text", { x: cx, y: cy + 5, textAnchor: "middle", className: "svg-mesh-label", fill: color }, /* @__PURE__ */ React.createElement(SvgMx, { s: label })));
+  }
+  function CompLabel({ c, g, ival, showI }) {
+    const off = c.type === "R" ? 16 : c.type === "short" ? 10 : 28;
+    const curr = showI && ival !== void 0 ? `|I| = ${fmt(Math.abs(ival), 3)} A` : null;
+    if (c.lab === "above" || c.lab === "below") {
+      const up = c.lab === "above";
+      const y = up ? g.cy - off - 2 : g.cy + off + 14;
+      return /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement("text", { x: g.cx, y, textAnchor: "middle", className: "svg-label" }, /* @__PURE__ */ React.createElement("tspan", { className: "svg-name" }, /* @__PURE__ */ React.createElement(SvgMx, { s: c.name })), /* @__PURE__ */ React.createElement("tspan", { className: "svg-val", dx: "6" }, c.val)), curr && /* @__PURE__ */ React.createElement("text", { x: g.cx, y: up ? g.cy + off + 14 : y + 17, textAnchor: "middle", className: "svg-curr" }, curr));
+    }
+    const left = c.lab === "left";
+    const x = left ? g.cx - off : g.cx + off;
+    const anchor = left ? "end" : "start";
+    return /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement("text", { x, y: g.cy - 3, textAnchor: anchor, className: "svg-label svg-name" }, /* @__PURE__ */ React.createElement(SvgMx, { s: c.name })), /* @__PURE__ */ React.createElement("text", { x, y: g.cy + 15, textAnchor: anchor, className: "svg-label svg-val" }, c.val), curr && /* @__PURE__ */ React.createElement("text", { x, y: g.cy + 32, textAnchor: anchor, className: "svg-curr" }, curr));
+  }
+  function CompBody({ c, g }) {
+    if (c.type === "R") {
+      return /* @__PURE__ */ React.createElement("g", { transform: `translate(${g.cx} ${g.cy}) rotate(${g.ang})` }, /* @__PURE__ */ React.createElement("rect", { x: "-23", y: "-11", width: "46", height: "22", fill: "var(--surface)" }), /* @__PURE__ */ React.createElement("path", { d: ZIG, fill: "none", stroke: "var(--wire)", strokeWidth: "2.6", strokeLinejoin: "round", strokeLinecap: "round" }));
+    }
+    if (c.type === "V") {
+      const s = c.plusAt === "end" ? 1 : -1;
+      const px = g.cx + g.u[0] * 9 * s, py = g.cy + g.u[1] * 9 * s;
+      const mx = g.cx - g.u[0] * 9 * s, my = g.cy - g.u[1] * 9 * s;
+      return /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement("circle", { cx: g.cx, cy: g.cy, r: "20", fill: "var(--surface)", stroke: "var(--wire)", strokeWidth: "2.6" }), /* @__PURE__ */ React.createElement("text", { x: px, y: py + 5.5, textAnchor: "middle", className: "svg-sign" }, "+"), /* @__PURE__ */ React.createElement("text", { x: mx, y: my + 5.5, textAnchor: "middle", className: "svg-sign" }, "\u2212"));
+    }
+    if (c.type === "I") {
+      const rot = g.ang + (c.dir === "backward" ? 180 : 0);
+      return /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement("circle", { cx: g.cx, cy: g.cy, r: "20", fill: "var(--surface)", stroke: "var(--wire)", strokeWidth: "2.6" }), /* @__PURE__ */ React.createElement("g", { transform: `translate(${g.cx} ${g.cy}) rotate(${rot})` }, /* @__PURE__ */ React.createElement("line", { x1: "-11", y1: "0", x2: "6", y2: "0", stroke: "var(--wire)", strokeWidth: "2.6", strokeLinecap: "round" }), /* @__PURE__ */ React.createElement("polygon", { points: "12,0 4,-6 4,6", fill: "var(--wire)" })));
+    }
+    if (c.type === "open") {
+      return /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement("circle", { cx: g.a[0], cy: g.a[1], r: "3.5", fill: "var(--surface)", stroke: "var(--wire)", strokeWidth: "2" }), /* @__PURE__ */ React.createElement("circle", { cx: g.b[0], cy: g.b[1], r: "3.5", fill: "var(--surface)", stroke: "var(--wire)", strokeWidth: "2" }));
+    }
+    return null;
+  }
+  function Ground({ at }) {
+    const [x, y] = at;
+    return /* @__PURE__ */ React.createElement("g", { stroke: "var(--wire)", strokeWidth: "2.4", strokeLinecap: "round" }, /* @__PURE__ */ React.createElement("line", { x1: x, y1: y, x2: x, y2: y + 12 }), /* @__PURE__ */ React.createElement("line", { x1: x - 12, y1: y + 12, x2: x + 12, y2: y + 12 }), /* @__PURE__ */ React.createElement("line", { x1: x - 7, y1: y + 17, x2: x + 7, y2: y + 17 }), /* @__PURE__ */ React.createElement("line", { x1: x - 2.5, y1: y + 22, x2: x + 2.5, y2: y + 22 }));
+  }
+  function CircuitSVG({ circuit, currents, focusKeys, activeKey, showI, onComp, title }) {
+    const fk = new Set(focusKeys || []);
+    const { branches, highlights = [], dots = [], ground, terminals = [] } = circuit;
+    const geo = useMemo(
+      () => branches.map((b) => ({ b, pieces: branchPieces(b), comps: (b.comps || []).map((c) => ({ c, g: compGeom(b, c) })) })),
+      [branches]
+    );
+    const byId = Object.fromEntries(geo.map((x) => [x.b.id, x]));
+    const maxI = Math.max(1e-9, ...branches.map((b) => Math.abs(currents[b.id] || 0)));
+    const reduced = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const glows = [];
+    highlights.forEach((h) => {
+      if (!fk.has(h.key)) return;
+      const brs = [...h.branches || [], ...h.extraBranches || []];
+      brs.forEach((id) => byId[id] && byId[id].pieces.forEach((p, i) => glows.push(/* @__PURE__ */ React.createElement("path", { key: `${h.key}-${id}-${i}`, d: ptsD(p.pts), className: "glow-wire", stroke: h.color }))));
+      if (h.kind === "node" || h.nodes) {
+        const keys = h.nodes || [h.key];
+        geo.forEach((x) => x.pieces.forEach((p, i) => keys.includes(p.node) && glows.push(/* @__PURE__ */ React.createElement("path", { key: `${h.key}-n-${x.b.id}-${i}`, d: ptsD(p.pts), className: "glow-wire", stroke: h.color }))));
+      }
+    });
+    const compHL = {};
+    highlights.forEach((h) => {
+      if (h.kind === "comp" && fk.has(h.key)) h.comps.forEach((k) => compHL[k] = h.color);
+    });
+    const termFocus = highlights.some((h) => h.kind === "term" && fk.has(h.key));
+    return /* @__PURE__ */ React.createElement("svg", { viewBox: circuit.viewBox, className: "w-full h-auto circuit-svg", role: "img", "aria-label": `Diagrama del circuito: ${title}` }, /* @__PURE__ */ React.createElement("defs", null, /* @__PURE__ */ React.createElement("filter", { id: "glow", x: "-30%", y: "-30%", width: "160%", height: "160%" }, /* @__PURE__ */ React.createElement("feGaussianBlur", { stdDeviation: "3.2", result: "b" }), /* @__PURE__ */ React.createElement("feMerge", null, /* @__PURE__ */ React.createElement("feMergeNode", { in: "b" }), /* @__PURE__ */ React.createElement("feMergeNode", { in: "SourceGraphic" })))), highlights.filter((h) => h.rect).map((h) => {
+      const on = fk.has(h.key);
+      const [x, y, w, hh] = h.rect;
+      const isSuper = h.kind === "super";
+      return /* @__PURE__ */ React.createElement(
+        "rect",
+        {
+          key: h.key,
+          x,
+          y,
+          width: w,
+          height: hh,
+          rx: h.round || 10,
+          fill: h.color,
+          fillOpacity: on ? 0.2 : isSuper ? 0 : 0.06,
+          stroke: h.color,
+          strokeOpacity: on ? 0.95 : isSuper ? 0.55 : 0,
+          strokeWidth: on ? 2.5 : 1.6,
+          strokeDasharray: isSuper ? "7 6" : on ? "0" : "0",
+          className: on ? "region-on" : ""
+        }
+      );
+    }), /* @__PURE__ */ React.createElement("g", { filter: "url(#glow)" }, glows), geo.map((x) => x.pieces.map((p, i) => /* @__PURE__ */ React.createElement("path", { key: `${x.b.id}-w${i}`, d: ptsD(p.pts), fill: "none", stroke: "var(--wire)", strokeWidth: "2.6", strokeLinejoin: "round", strokeLinecap: "round" }))), highlights.filter((h) => h.exclude && fk.has(h.key)).map((h) => h.exclude.map((id) => byId[id] && /* @__PURE__ */ React.createElement("path", { key: `ex-${id}`, d: ptsD(byId[id].b.pts), fill: "none", stroke: "var(--sup)", strokeWidth: "5", strokeDasharray: "3 7", strokeLinecap: "round", opacity: "0.9" }))), geo.map(({ b }) => {
+      const I = currents[b.id] || 0;
+      if (Math.abs(I) < 1e-6) return null;
+      const pts = I >= 0 ? b.pts : [...b.pts].reverse();
+      const rel = Math.min(1, Math.abs(I) / maxI);
+      const speed = 22 + 70 * rel;
+      const dur = 16.1 / speed;
+      return /* @__PURE__ */ React.createElement("path", { key: `f-${b.id}`, d: ptsD(pts), className: "flow", style: { animationDuration: `${dur}s`, opacity: 0.55 + 0.45 * rel } });
+    }), geo.map(({ b, comps }) => comps.map(({ c, g }) => {
+      const clickable = !!c.key && !!PM[c.key] && c.type !== "short" && c.type !== "open";
+      const hl = compHL[c.key] || (activeKey && activeKey === c.key ? "var(--accent)" : null);
+      return /* @__PURE__ */ React.createElement(
+        "g",
+        {
+          key: `${b.id}-${c.seg}`,
+          className: clickable ? "comp clickable" : "comp",
+          onClick: clickable ? () => onComp(c.key) : void 0,
+          role: clickable ? "button" : void 0,
+          tabIndex: clickable ? 0 : void 0,
+          "aria-label": clickable ? `Editar ${c.key}` : void 0,
+          onKeyDown: clickable ? (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              onComp(c.key);
+            }
+          } : void 0
+        },
+        hl && /* @__PURE__ */ React.createElement("circle", { cx: g.cx, cy: g.cy, r: "30", fill: hl, fillOpacity: "0.16", stroke: hl, strokeWidth: "2", filter: "url(#glow)" }),
+        clickable && /* @__PURE__ */ React.createElement("rect", { x: g.cx - 30, y: g.cy - 30, width: "60", height: "60", fill: "transparent" }),
+        /* @__PURE__ */ React.createElement(CompBody, { c, g })
+      );
+    })), dots.map((d, i) => /* @__PURE__ */ React.createElement("circle", { key: `d${i}`, cx: d[0], cy: d[1], r: "4.2", fill: "var(--wire)" })), ground && /* @__PURE__ */ React.createElement(Ground, { at: ground }), terminals.map((t, i) => /* @__PURE__ */ React.createElement("g", { key: `t${i}` }, termFocus && /* @__PURE__ */ React.createElement("circle", { cx: t[0], cy: t[1], r: "11", fill: "var(--accent)", fillOpacity: "0.25", filter: "url(#glow)" }), /* @__PURE__ */ React.createElement("circle", { cx: t[0], cy: t[1], r: "5.5", fill: "var(--surface)", stroke: "var(--accent)", strokeWidth: "2.6" }), /* @__PURE__ */ React.createElement("text", { x: t[0] + 1, y: i === 0 ? t[1] - 13 : t[1] + 25, textAnchor: "middle", className: "svg-term" }, i === 0 ? "a" : "b"))), geo.map(({ b, comps }) => comps.map(({ c, g }) => /* @__PURE__ */ React.createElement(CompLabel, { key: `l-${b.id}-${c.seg}`, c, g, ival: currents[b.id], showI }))), highlights.filter((h) => h.kind === "mesh").map((h) => /* @__PURE__ */ React.createElement(MeshArrow, { key: `a-${h.key}`, cx: h.rect[0] + h.rect[2] / 2, cy: YT + 56, color: h.color, label: h.label, strong: fk.has(h.key) })), highlights.filter((h) => h.kind === "super").map((h) => /* @__PURE__ */ React.createElement("text", { key: `sl-${h.key}`, x: h.key === "SN" ? h.rect[0] + h.rect[2] / 2 : h.rect[0] + 12, y: h.key === "SN" ? h.rect[1] + h.rect[3] - 8 : h.rect[1] + h.rect[3] - 10, textAnchor: h.key === "SN" ? "middle" : "start", className: "svg-super", fill: h.color, opacity: fk.has(h.key) ? 1 : 0.75 }, h.label)), highlights.filter((h) => h.kind === "node").map((h) => {
+      const on = fk.has(h.key);
+      const w = h.label.length > 3 ? 40 : 30;
+      const ground2 = h.key === "g";
+      const y = ground2 ? h.at[1] : h.at[1] - 20;
+      return /* @__PURE__ */ React.createElement("g", { key: `nb-${h.key}`, className: "node-badge" }, !ground2 && /* @__PURE__ */ React.createElement("circle", { cx: h.at[0], cy: h.at[1], r: on ? 7 : 5, fill: h.color }), /* @__PURE__ */ React.createElement("rect", { x: h.at[0] - w / 2, y: y - 13, width: w, height: "20", rx: "10", fill: on ? h.color : "var(--surface)", stroke: h.color, strokeWidth: "1.8" }), /* @__PURE__ */ React.createElement("text", { x: h.at[0], y: y + 2, textAnchor: "middle", className: "svg-badge", fill: on ? "var(--surface)" : h.color }, /* @__PURE__ */ React.createElement(SvgMx, { s: h.label })));
+    }));
+  }
+  function Panel({ title, kicker, right, children, defaultOpen = true, id }) {
+    const [open, setOpen] = useState(defaultOpen);
+    return /* @__PURE__ */ React.createElement("section", { className: "panel", id }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap items-center gap-2 px-4 sm:px-5 pt-3.5 pb-3" }, /* @__PURE__ */ React.createElement("button", { type: "button", className: "panel-toggle flex-1 min-w-[13rem] text-left flex items-center gap-3", onClick: () => setOpen((o) => !o), "aria-expanded": open }, /* @__PURE__ */ React.createElement("span", { className: `chev ${open ? "open" : ""}`, "aria-hidden": "true" }, "\u203A"), /* @__PURE__ */ React.createElement("span", { className: "min-w-0" }, kicker && /* @__PURE__ */ React.createElement("span", { className: "kicker block" }, kicker), /* @__PURE__ */ React.createElement("span", { className: "font-display text-[1.15rem] leading-tight text-ink block" }, title))), right), open && /* @__PURE__ */ React.createElement("div", { className: "px-4 sm:px-5 pb-5" }, children));
+  }
+  function Segmented({ options, value, onChange, label, size = "md" }) {
+    return /* @__PURE__ */ React.createElement("div", { className: `seg seg-${size}`, role: "group", "aria-label": label }, options.map((o) => /* @__PURE__ */ React.createElement("button", { key: o.id, type: "button", className: value === o.id ? "on" : "", "aria-pressed": value === o.id, onClick: () => onChange(o.id) }, o.render || /* @__PURE__ */ React.createElement(Mx, { s: o.label }))));
+  }
+  function ParamControl({ k, value, onChange, flash, inputRef }) {
+    const m = PM[k];
+    const [draft, setDraft] = useState(String(value));
+    useEffect(() => setDraft(String(value)), [value]);
+    const clamp = (v) => m.unit === "\u03A9" ? Math.max(0.1, Math.min(1e3, v)) : Math.max(-1e3, Math.min(1e3, v));
+    const commit = (v) => {
+      if (isFinite(v)) onChange(k, Math.round(clamp(v) * 1e3) / 1e3);
+    };
+    const step = (dir) => commit(Math.round((value + dir * m.step) / m.step) * m.step);
+    const pct = (Math.max(m.min, Math.min(m.max, value)) - m.min) / (m.max - m.min) * 100;
+    return /* @__PURE__ */ React.createElement("div", { id: `ctl-${k}`, className: `ctl ${flash ? "flash" : ""}` }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between gap-2" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-col min-w-0 leading-tight" }, /* @__PURE__ */ React.createElement("label", { htmlFor: `in-${k}` }, /* @__PURE__ */ React.createElement(Mx, { s: m.label, className: "text-[1.1rem] font-semibold text-ink" })), /* @__PURE__ */ React.createElement("span", { className: "text-[0.76rem] text-muted" }, /* @__PURE__ */ React.createElement(Term, { k: m.term }, m.desc))), /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-1.5 shrink-0" }, /* @__PURE__ */ React.createElement("button", { type: "button", className: "stepper", "aria-label": `Disminuir ${k}`, onClick: () => step(-1) }, "\u2212"), /* @__PURE__ */ React.createElement(
+      "input",
+      {
+        ref: inputRef,
+        id: `in-${k}`,
+        className: "num",
+        type: "text",
+        inputMode: "decimal",
+        value: draft,
+        onChange: (e) => {
+          const s = e.target.value.replace(",", ".");
+          setDraft(s);
+          const v = parseFloat(s);
+          if (isFinite(v) && (m.unit !== "\u03A9" || v > 0)) commit(v);
+        },
+        onBlur: () => setDraft(String(value)),
+        "aria-label": `Valor de ${k} en ${m.unit}`
+      }
+    ), /* @__PURE__ */ React.createElement("span", { className: "unit" }, m.unit), /* @__PURE__ */ React.createElement("button", { type: "button", className: "stepper", "aria-label": `Aumentar ${k}`, onClick: () => step(1) }, "+"))), /* @__PURE__ */ React.createElement(
+      "input",
+      {
+        id: `rg-${k}`,
+        type: "range",
+        className: "range",
+        min: m.min,
+        max: m.max,
+        step: m.step,
+        value: Math.max(m.min, Math.min(m.max, value)),
+        onChange: (e) => commit(parseFloat(e.target.value)),
+        style: { "--pct": `${pct}%` },
+        "aria-label": `Control deslizante de ${k}`
+      }
+    ));
+  }
+  function Matrix({ rows, cls = "", hlRow, hlCol, onRow, onCol, rowColors }) {
+    var _a;
+    const cols = ((_a = rows[0]) == null ? void 0 : _a.length) || 1;
+    return /* @__PURE__ */ React.createElement("div", { className: `mat ${cls}`, style: { gridTemplateColumns: `repeat(${cols}, auto)` } }, rows.map((r, i) => r.map((cell, j) => {
+      const on = hlRow === i || hlCol === j;
+      return /* @__PURE__ */ React.createElement(
+        "span",
+        {
+          key: `${i}-${j}`,
+          className: `cell ${on ? "on" : ""} ${onRow || onCol ? "clickable" : ""}`,
+          style: on && rowColors ? { "--hl": rowColors[hlRow === i ? i : j] } : void 0,
+          onClick: onRow ? () => onRow(i) : onCol ? () => onCol(j) : void 0
+        },
+        cell
+      );
+    })));
+  }
+  function PowerChart({ Vth, Rth, RL }) {
+    const W = 340, H = 150, padL = 40, padB = 26, padT = 12, padR = 10;
+    const Rmax = Math.max(20, Rth * 3, RL * 1.2);
+    const P = (r) => Vth * Vth * r / ((Rth + r) * (Rth + r));
+    const Pmax = Vth * Vth / (4 * Rth) || 1;
+    const sx = (r) => padL + r / Rmax * (W - padL - padR);
+    const sy = (p) => H - padB - p / (Pmax * 1.15) * (H - padB - padT);
+    const N = 80;
+    const pts = Array.from({ length: N + 1 }, (_, i) => {
+      const r = i / N * Rmax;
+      return [sx(r), sy(P(r))];
+    });
+    const line = pts.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(" ");
+    const area = `${line} L${sx(Rmax)} ${sy(0)} L${sx(0)} ${sy(0)} Z`;
+    const ticks = [0, Rmax / 2, Rmax].map((r) => Math.round(r));
+    return /* @__PURE__ */ React.createElement("svg", { viewBox: `0 0 ${W} ${H}`, className: "w-full h-auto", role: "img", "aria-label": "Potencia en la carga contra R_L" }, [0.5, 1].map((f) => /* @__PURE__ */ React.createElement("line", { key: f, x1: padL, x2: W - padR, y1: sy(Pmax * f), y2: sy(Pmax * f), stroke: "var(--line)", strokeDasharray: "3 4" })), /* @__PURE__ */ React.createElement("line", { x1: padL, x2: W - padR, y1: sy(0), y2: sy(0), stroke: "var(--muted)", strokeWidth: "1" }), /* @__PURE__ */ React.createElement("path", { d: area, fill: "var(--accent)", fillOpacity: "0.1" }), /* @__PURE__ */ React.createElement("path", { d: line, fill: "none", stroke: "var(--accent)", strokeWidth: "2.2" }), /* @__PURE__ */ React.createElement("line", { x1: sx(Rth), x2: sx(Rth), y1: sy(0), y2: sy(Pmax), stroke: "var(--sup)", strokeDasharray: "4 4", strokeWidth: "1.5" }), /* @__PURE__ */ React.createElement("text", { x: sx(Rth) + 4, y: padT + 8, className: "chart-t", fill: "var(--sup)" }, /* @__PURE__ */ React.createElement(SvgMx, { s: "R_L = R_{th}" })), /* @__PURE__ */ React.createElement("circle", { cx: sx(RL), cy: sy(P(RL)), r: "5", fill: "var(--flow)", stroke: "var(--surface)", strokeWidth: "2" }), ticks.map((t) => /* @__PURE__ */ React.createElement("text", { key: t, x: sx(t), y: H - 8, textAnchor: "middle", className: "chart-t" }, t, " \u03A9")), /* @__PURE__ */ React.createElement("text", { x: padL - 6, y: sy(Pmax) + 4, textAnchor: "end", className: "chart-t" }, fmt(Pmax, 2)), /* @__PURE__ */ React.createElement("text", { x: padL - 6, y: sy(0) + 4, textAnchor: "end", className: "chart-t" }, "0"), /* @__PURE__ */ React.createElement("text", { x: padL - 6, y: padT + 2, textAnchor: "end", className: "chart-t" }, "W"));
+  }
+  var TAG_CLS = { LVK: "tag-lvk", LCK: "tag-lck", "Restricci\xF3n": "tag-res" };
+  var TAG_TERM = { LVK: "lvk", LCK: "lck", "Restricci\xF3n": "restriccion" };
+  var ROW_COLORS = ["var(--c1)", "var(--c2)", "var(--c3)"];
+  var TABS = [
+    { id: "mallas", label: "Mallas" },
+    { id: "nodos", label: "Nodos" },
+    { id: "super", label: "Casos especiales" },
+    { id: "thevenin", label: "Th\xE9venin" },
+    { id: "norton", label: "Norton" }
+  ];
+  var VALID = MODES.map((m) => m.id);
+  var readHash = () => {
+    try {
+      const h = (location.hash || "").slice(1);
+      return VALID.includes(h) ? h : null;
+    } catch (e) {
+      return null;
+    }
+  };
+  function App() {
+    var _a, _b, _c;
+    const [mode, setModeRaw] = useState(() => readHash() || "mallas");
+    const [P, setP] = useState(DEFAULTS);
+    const [views, setViews] = useState({ thevenin: "original", norton: "original" });
+    const [hover, setHover] = useState(null);
+    const [pin, setPin] = useState(null);
+    const [numMode, setNumMode] = useState("num");
+    const [showI, setShowI] = useState(false);
+    const [stick, setStick] = useState(false);
+    const [flashKey, setFlashKey] = useState(null);
+    const [activeKey, setActiveKey] = useState(null);
+    const lastSuper = useRef(mode === "supernodo" ? "supernodo" : "supermalla");
+    const inputs = useRef({});
+    const setMode = useCallback((m) => {
+      setModeRaw(m);
+      setHover(null);
+      setPin(null);
+      setActiveKey(null);
+      if (m === "supermalla" || m === "supernodo") lastSuper.current = m;
+      try {
+        if (location.hash.slice(1) !== m) location.hash = m;
+      } catch (e) {
+      }
+    }, []);
+    useEffect(() => {
+      const on = () => {
+        const h = readHash();
+        if (h) {
+          setModeRaw(h);
+          setHover(null);
+          setPin(null);
+        }
+      };
+      window.addEventListener("hashchange", on);
+      return () => window.removeEventListener("hashchange", on);
+    }, []);
+    const view = views[mode];
+    const model = useMemo(() => buildModel(mode, P, view), [mode, P, view]);
+    const modeMeta = MODES.find((m) => m.id === mode);
+    const tab = modeMeta.tab;
+    const focus = hover || pin;
+    const focusKeys = (focus == null ? void 0 : focus.keys) || [];
+    const fRow = (_a = focus == null ? void 0 : focus.row) != null ? _a : null;
+    const fCol = (_b = focus == null ? void 0 : focus.col) != null ? _b : null;
+    const selUnknown = (_c = fCol != null ? fCol : fRow) != null ? _c : 0;
+    const bind = (f) => ({
+      onMouseEnter: () => setHover(f),
+      onMouseLeave: () => setHover(null),
+      onClick: () => {
+        setPin((p) => p && p.id === f.id ? null : f);
+        if (f.view) setViews((v) => ({ ...v, [mode]: f.view }));
+      }
+    });
+    const setParam = useCallback((k, v) => setP((p) => ({ ...p, [k]: v })), []);
+    const onComp = useCallback((k) => {
+      setActiveKey(k);
+      setFlashKey(k);
+      const el = document.getElementById(`ctl-${k}`);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => setFlashKey(null), 1300);
+    }, []);
+    const { A, B, inv, det, x } = model;
+    const n = A.length;
+    const syms = model.unknowns.map((u) => u.sym);
+    const numA = A.map((r) => r.map((v) => fmtSig(v)));
+    const symA = model.Asym.map((r) => r.map((s) => /* @__PURE__ */ React.createElement(Mx, { s })));
+    const xCol = syms.map((s) => [/* @__PURE__ */ React.createElement(Mx, { s })]);
+    const bCol = numMode === "num" ? B.map((v) => [fmtSig(v)]) : model.Bsym.map((s) => [/* @__PURE__ */ React.createElement(Mx, { s })]);
+    const invRows = inv ? inv.map((r) => r.map((v) => fmtSig(v))) : null;
+    const solRows = x.map((v, i) => [/* @__PURE__ */ React.createElement("span", null, /* @__PURE__ */ React.createElement(Mx, { s: syms[i] }), " = ", /* @__PURE__ */ React.createElement("b", null, fmt(v, 4)), " ", /* @__PURE__ */ React.createElement("span", { className: "text-muted" }, model.unknowns[i].unit))]);
+    const titleForMode = modeMeta.label;
+    const isTh = !!model.isThNo;
+    const viewSwitch = model.views && /* @__PURE__ */ React.createElement("div", { className: "mt-3" }, /* @__PURE__ */ React.createElement(
+      Segmented,
+      {
+        size: "sm",
+        label: "Vista del circuito",
+        value: view,
+        onChange: (v) => {
+          setViews((s) => ({ ...s, [mode]: v }));
+          setPin(null);
+        },
+        options: model.views.map((v) => ({ id: v.id, label: v.label }))
+      }
+    ));
+    const legendItems = (model.circuit.highlights || []).filter((h) => h.kind === "mesh" || h.kind === "super" || h.kind === "node" && !h.known);
+    return /* @__PURE__ */ React.createElement("div", { className: "min-h-full" }, /* @__PURE__ */ React.createElement("header", { className: "max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-4" }, /* @__PURE__ */ React.createElement("p", { className: "kicker" }, "Circuitos en corriente directa \xB7 leyes de Kirchhoff \xB7 \xE1lgebra lineal"), /* @__PURE__ */ React.createElement("h1", { className: "font-display text-[2rem] sm:text-[2.6rem] leading-[1.05] text-ink mt-1" }, "Laboratorio de Kirchhoff"), /* @__PURE__ */ React.createElement("p", { className: "mt-2 text-muted max-w-2xl text-[0.98rem] leading-relaxed" }, "Cambia un valor y observa c\xF3mo se reescriben las leyes de Kirchhoff, c\xF3mo se ordenan en ", /* @__PURE__ */ React.createElement(Mx, { s: "A\xB7x = B", className: "mx-inline" }), " y c\xF3mo la ", /* @__PURE__ */ React.createElement(Term, { k: "inversa" }, "matriz inversa"), " resuelve el circuito al instante. Toca cualquier palabra subrayada para ver su definici\xF3n."), /* @__PURE__ */ React.createElement("nav", { className: "tabs mt-5", "aria-label": "M\xE9todo de an\xE1lisis" }, TABS.map((t) => /* @__PURE__ */ React.createElement(
+      "button",
+      {
+        key: t.id,
+        type: "button",
+        className: tab === t.id ? "on" : "",
+        "aria-current": tab === t.id ? "page" : void 0,
+        onClick: () => setMode(t.id === "super" ? lastSuper.current : t.id)
+      },
+      t.label
+    ))), tab === "super" && /* @__PURE__ */ React.createElement("div", { className: "mt-3 flex flex-wrap items-center gap-3" }, /* @__PURE__ */ React.createElement(
+      Segmented,
+      {
+        label: "Caso especial",
+        value: mode,
+        onChange: setMode,
+        options: [{ id: "supermalla", render: /* @__PURE__ */ React.createElement("span", null, "Supermalla ", /* @__PURE__ */ React.createElement("span", { className: "opacity-70" }, "\xB7 fuente de corriente entre mallas")) }, { id: "supernodo", render: /* @__PURE__ */ React.createElement("span", null, "Supernodo ", /* @__PURE__ */ React.createElement("span", { className: "opacity-70" }, "\xB7 fuente de voltaje entre nodos")) }]
+      }
+    ))), /* @__PURE__ */ React.createElement("main", { className: "max-w-7xl mx-auto px-4 sm:px-6 pb-16 grid grid-cols-1 gap-4 lg:gap-5 lg:grid-cols-[minmax(0,1.04fr)_minmax(0,1fr)] items-start" }, /* @__PURE__ */ React.createElement("div", { className: "contents lg:flex lg:flex-col gap-4 lg:sticky lg:top-4 lg:max-h-[calc(100dvh-2rem)] lg:overflow-y-auto lg:pr-1 left-col" }, /* @__PURE__ */ React.createElement("section", { className: `panel circuit-card ${stick ? "stuck" : ""}` }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap items-start justify-between gap-2 px-4 sm:px-5 pt-4" }, /* @__PURE__ */ React.createElement("div", { className: "min-w-0" }, /* @__PURE__ */ React.createElement("p", { className: "kicker" }, model.kind === "mesh" ? "Inc\xF3gnitas: corrientes de malla" : isTh ? "Red vista desde a\u2013b" : "Inc\xF3gnitas: voltajes de nodo"), /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[1.3rem] leading-tight text-ink" }, titleForMode)), /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2" }, /* @__PURE__ */ React.createElement("button", { type: "button", className: `chip ${showI ? "on" : ""}`, "aria-pressed": showI, onClick: () => setShowI((s) => !s) }, "Ver corrientes"), /* @__PURE__ */ React.createElement("button", { type: "button", className: `chip lg:hidden ${stick ? "on" : ""}`, "aria-pressed": stick, onClick: () => setStick((s) => !s) }, stick ? "Soltar" : "Fijar arriba"))), /* @__PURE__ */ React.createElement("div", { className: "px-1 sm:px-3 pt-1 svg-wrap" }, /* @__PURE__ */ React.createElement(CircuitSVG, { circuit: model.circuit, currents: model.currents, focusKeys, activeKey, showI, onComp, title: titleForMode })), /* @__PURE__ */ React.createElement("div", { className: "px-4 sm:px-5 pb-4" }, viewSwitch, /* @__PURE__ */ React.createElement("div", { className: "mt-3 flex flex-wrap items-center gap-2 text-[0.8rem] text-muted" }, /* @__PURE__ */ React.createElement("span", { className: "legend-flow", "aria-hidden": "true" }, /* @__PURE__ */ React.createElement("i", null), /* @__PURE__ */ React.createElement("i", null), /* @__PURE__ */ React.createElement("i", null)), /* @__PURE__ */ React.createElement("span", null, /* @__PURE__ */ React.createElement(Term, { k: "corriente" }, "Corriente"), " en su sentido real; m\xE1s r\xE1pida = mayor |I|.")), legendItems.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "mt-2 flex flex-wrap gap-2" }, legendItems.map((h) => /* @__PURE__ */ React.createElement(
+      "button",
+      {
+        key: h.key,
+        type: "button",
+        className: `legend-chip ${focusKeys.includes(h.key) ? "on" : ""}`,
+        style: { "--c": h.color },
+        ...bind({ id: `lg-${h.key}`, keys: [h.key] })
+      },
+      /* @__PURE__ */ React.createElement("i", { "aria-hidden": "true" }),
+      h.kind === "mesh" && /* @__PURE__ */ React.createElement(React.Fragment, null, "Malla ", /* @__PURE__ */ React.createElement(Mx, { s: h.label })),
+      h.kind === "node" && /* @__PURE__ */ React.createElement(React.Fragment, null, "Nodo ", /* @__PURE__ */ React.createElement(Mx, { s: h.label })),
+      h.kind === "super" && /* @__PURE__ */ React.createElement(Term, { k: h.key === "SM" ? "supermalla" : "supernodo" }, h.label)
+    ))))), /* @__PURE__ */ React.createElement(
+      Panel,
+      {
+        title: "Valores del circuito",
+        kicker: "Manipulaci\xF3n en tiempo real",
+        id: "controles",
+        right: /* @__PURE__ */ React.createElement("button", { type: "button", className: "chip", onClick: () => setP(DEFAULTS) }, "Restablecer")
+      },
+      /* @__PURE__ */ React.createElement("p", { className: "text-[0.85rem] text-muted mb-3" }, "Toca un componente en el diagrama para saltar a su control."),
+      /* @__PURE__ */ React.createElement("div", { className: "grid gap-3 sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2" }, model.params.map((k) => /* @__PURE__ */ React.createElement(ParamControl, { key: k, k, value: P[k], onChange: setParam, flash: flashKey === k, inputRef: (el) => inputs.current[k] = el })))
+    )), /* @__PURE__ */ React.createElement("div", { className: "flex flex-col gap-4" }, /* @__PURE__ */ React.createElement(Panel, { title: "Planteamiento paso a paso", kicker: modeMeta.short }, /* @__PURE__ */ React.createElement("ol", { className: "steps" }, model.steps.map((s, i) => {
+      var _a2;
+      const f = { id: `st-${mode}-${i}`, keys: s.focus, row: (_a2 = s.row) != null ? _a2 : null, view: s.view };
+      const on = pin && pin.id === f.id;
+      return /* @__PURE__ */ React.createElement("li", { key: f.id }, /* @__PURE__ */ React.createElement(
+        "div",
+        {
+          role: "button",
+          tabIndex: 0,
+          className: `step ${on ? "on" : ""} ${s.view && view === s.view ? "view-on" : ""}`,
+          ...bind(f),
+          onKeyDown: (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              bind(f).onClick();
+            }
+          }
+        },
+        /* @__PURE__ */ React.createElement("span", { className: "step-n" }, i + 1),
+        /* @__PURE__ */ React.createElement("div", { className: "min-w-0" }, /* @__PURE__ */ React.createElement("p", { className: "step-t" }, /* @__PURE__ */ React.createElement(Sub, { s: s.title })), /* @__PURE__ */ React.createElement("p", { className: "step-d" }, /* @__PURE__ */ React.createElement(Rich, { text: s.text })))
+      ));
+    })), /* @__PURE__ */ React.createElement("p", { className: "insight mt-3" }, /* @__PURE__ */ React.createElement(Rich, { text: model.insight }))), /* @__PURE__ */ React.createElement(Panel, { title: "Ecuaciones de Kirchhoff", kicker: "De la ley f\xEDsica a la fila de la matriz" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-col gap-2.5" }, model.eqs.map((e, i) => {
+      const f = { id: `eq-${mode}-${i}`, keys: e.focus, row: i };
+      const on = fRow === i;
+      return /* @__PURE__ */ React.createElement(
+        "div",
+        {
+          key: f.id,
+          role: "button",
+          tabIndex: 0,
+          className: `eq ${on ? "on" : ""}`,
+          style: { "--hl": ROW_COLORS[i] },
+          ...bind(f),
+          onKeyDown: (ev) => {
+            if (ev.key === "Enter" || ev.key === " ") {
+              ev.preventDefault();
+              bind(f).onClick();
+            }
+          }
+        },
+        /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2 mb-1.5" }, /* @__PURE__ */ React.createElement("span", { className: "row-dot", "aria-hidden": "true" }, i + 1), /* @__PURE__ */ React.createElement("span", { className: `tag ${TAG_CLS[e.tag]}` }, /* @__PURE__ */ React.createElement(Term, { k: TAG_TERM[e.tag] }, e.tag)), /* @__PURE__ */ React.createElement("span", { className: "text-[0.9rem] font-semibold text-ink" }, /* @__PURE__ */ React.createElement(Sub, { s: e.title }))),
+        /* @__PURE__ */ React.createElement("div", { className: "eq-lines" }, /* @__PURE__ */ React.createElement("span", { className: "eq-k" }, "Ley"), /* @__PURE__ */ React.createElement(Mx, { s: e.law, className: "eq-v" }), /* @__PURE__ */ React.createElement("span", { className: "eq-k" }, "Sustituye"), /* @__PURE__ */ React.createElement(Mx, { s: e.sub, className: "eq-v" }), /* @__PURE__ */ React.createElement("span", { className: "eq-k" }, "Agrupa"), /* @__PURE__ */ React.createElement(Mx, { s: rowMarkup(A[i], syms, B[i]), className: "eq-v eq-final" }))
+      );
+    }))), /* @__PURE__ */ React.createElement(
+      Panel,
+      {
+        title: "Forma matricial A\xB7x = B",
+        kicker: "\xC1lgebra lineal",
+        right: /* @__PURE__ */ React.createElement(Segmented, { size: "sm", label: "Notaci\xF3n de la matriz", value: numMode, onChange: setNumMode, options: [{ id: "num", label: "N\xFAmeros" }, { id: "sym", label: "S\xEDmbolos" }] })
+      },
+      /* @__PURE__ */ React.createElement("div", { className: "overflow-x-auto -mx-1 px-1 pb-1" }, /* @__PURE__ */ React.createElement("div", { className: "matrix-eq" }, /* @__PURE__ */ React.createElement("div", { className: "mat-group" }, /* @__PURE__ */ React.createElement("span", { className: "mat-cap" }, "A ", /* @__PURE__ */ React.createElement("span", { className: "text-muted" }, "[", model.units.A, "]")), /* @__PURE__ */ React.createElement(
+        Matrix,
+        {
+          rows: numMode === "num" ? numA : symA,
+          hlRow: fRow,
+          hlCol: fCol,
+          rowColors: ROW_COLORS,
+          onRow: (i) => setPin((p) => p && p.id === `row-${i}` ? null : { id: `row-${i}`, keys: model.eqs[i].focus, row: i })
+        }
+      )), /* @__PURE__ */ React.createElement("span", { className: "op" }, "\xB7"), /* @__PURE__ */ React.createElement("div", { className: "mat-group" }, /* @__PURE__ */ React.createElement("span", { className: "mat-cap" }, "x ", /* @__PURE__ */ React.createElement("span", { className: "text-muted" }, "[", model.units.x, "]")), /* @__PURE__ */ React.createElement(
+        Matrix,
+        {
+          rows: xCol,
+          hlRow: fCol,
+          rowColors: ROW_COLORS,
+          onRow: (j) => setPin((p) => p && p.id === `col-${j}` ? null : { id: `col-${j}`, keys: model.unknowns[j].focus, col: j })
+        }
+      )), /* @__PURE__ */ React.createElement("span", { className: "op" }, "="), /* @__PURE__ */ React.createElement("div", { className: "mat-group" }, /* @__PURE__ */ React.createElement("span", { className: "mat-cap" }, "B ", /* @__PURE__ */ React.createElement("span", { className: "text-muted" }, "[", model.units.B, "]")), /* @__PURE__ */ React.createElement(Matrix, { rows: bCol, hlRow: fRow, rowColors: ROW_COLORS })))),
+      /* @__PURE__ */ React.createElement("p", { className: "text-[0.85rem] text-muted mt-3 leading-relaxed" }, "Cada fila de ", /* @__PURE__ */ React.createElement(Mx, { s: "A" }), " es una ecuaci\xF3n; cada columna, una inc\xF3gnita. Toca una fila para ver su regi\xF3n en el circuito, o una inc\xF3gnita de ", /* @__PURE__ */ React.createElement(Mx, { s: "x" }), " para resaltar su columna.", model.kind === "mesh" && mode === "mallas" && " Observa la simetr\xEDa: el elemento (i, j) es menos la resistencia compartida por las mallas i y j.", mode === "nodos" && " Es una matriz de conductancias: sim\xE9trica, con la diagonal dominante.", (mode === "supermalla" || mode === "supernodo") && " La fila de restricci\xF3n s\xF3lo contiene 1 y \u22121, y rompe la simetr\xEDa.")
+    ), /* @__PURE__ */ React.createElement(Panel, { title: "Soluci\xF3n x = A\u207B\xB9B", kicker: "Resoluci\xF3n autom\xE1tica" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap items-center gap-3 mb-3" }, /* @__PURE__ */ React.createElement("span", { className: "pill" }, /* @__PURE__ */ React.createElement(Term, { k: "determinante" }, "det(A)"), " = ", /* @__PURE__ */ React.createElement("b", { className: "mx" }, fmtSig(det))), /* @__PURE__ */ React.createElement("span", { className: `pill ${Math.abs(det) > 1e-10 ? "pill-ok" : "pill-bad"}` }, Math.abs(det) > 1e-10 ? "Invertible: soluci\xF3n \xFAnica" : "Singular: sin soluci\xF3n \xFAnica")), invRows && /* @__PURE__ */ React.createElement("div", { className: "overflow-x-auto -mx-1 px-1 pb-1" }, /* @__PURE__ */ React.createElement("div", { className: "matrix-eq" }, /* @__PURE__ */ React.createElement("div", { className: "mat-group" }, /* @__PURE__ */ React.createElement("span", { className: "mat-cap" }, "x"), /* @__PURE__ */ React.createElement(Matrix, { rows: xCol, hlRow: selUnknown, rowColors: ROW_COLORS })), /* @__PURE__ */ React.createElement("span", { className: "op" }, "="), /* @__PURE__ */ React.createElement("div", { className: "mat-group" }, /* @__PURE__ */ React.createElement("span", { className: "mat-cap" }, /* @__PURE__ */ React.createElement(Term, { k: "inversa" }, "A\u207B\xB9")), /* @__PURE__ */ React.createElement(
+      Matrix,
+      {
+        rows: invRows,
+        hlRow: selUnknown,
+        rowColors: ROW_COLORS,
+        onRow: (i) => setPin((p) => p && p.id === `col-${i}` ? null : { id: `col-${i}`, keys: model.unknowns[i].focus, col: i })
+      }
+    )), /* @__PURE__ */ React.createElement("span", { className: "op" }, "\xB7"), /* @__PURE__ */ React.createElement("div", { className: "mat-group" }, /* @__PURE__ */ React.createElement("span", { className: "mat-cap" }, "B"), /* @__PURE__ */ React.createElement(Matrix, { rows: B.map((v) => [fmtSig(v)]) })), /* @__PURE__ */ React.createElement("span", { className: "op" }, "="), /* @__PURE__ */ React.createElement("div", { className: "mat-group" }, /* @__PURE__ */ React.createElement("span", { className: "mat-cap" }, "resultado"), /* @__PURE__ */ React.createElement(Matrix, { rows: solRows, hlRow: selUnknown, rowColors: ROW_COLORS })))), invRows && /* @__PURE__ */ React.createElement("div", { className: "expand mt-3", style: { "--hl": ROW_COLORS[selUnknown] } }, /* @__PURE__ */ React.createElement("p", { className: "kicker mb-1" }, "Fila ", selUnknown + 1, " de A\u207B\xB9 por B"), /* @__PURE__ */ React.createElement("p", { className: "mx text-[0.92rem] leading-relaxed break-words" }, /* @__PURE__ */ React.createElement(Mx, { s: syms[selUnknown] }), " = ", inv[selUnknown].map((a, j) => /* @__PURE__ */ React.createElement(React.Fragment, { key: j }, j ? " + " : "", "(", fmtSig(a), ")(", fmtSig(B[j]), ")")), " = ", /* @__PURE__ */ React.createElement("b", null, fmt(x[selUnknown], 4), " ", model.unknowns[selUnknown].unit))), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-2 sm:grid-cols-3 gap-2.5 mt-4" }, model.unknowns.map((u, i) => {
+      const f = { id: `col-${i}`, keys: u.focus, col: i };
+      return /* @__PURE__ */ React.createElement("button", { key: u.sym, type: "button", className: `ucard ${selUnknown === i && focus ? "on" : ""}`, style: { "--hl": ROW_COLORS[i] }, ...bind(f) }, /* @__PURE__ */ React.createElement("span", { className: "text-[0.75rem] text-muted block leading-tight" }, u.label), /* @__PURE__ */ React.createElement("span", { className: "mx text-[1.35rem] font-semibold text-ink block mt-1" }, /* @__PURE__ */ React.createElement(Mx, { s: u.sym }), " = ", fmt(x[i], 3)), /* @__PURE__ */ React.createElement("span", { className: "text-[0.8rem] text-muted" }, u.unit));
+    }))), isTh && /* @__PURE__ */ React.createElement(Panel, { title: model.isThNo === "thevenin" ? "Equivalente de Th\xE9venin" : "Equivalente de Norton", kicker: "Resultado en las terminales a\u2013b" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-2 gap-2.5" }, model.th.cards.map((c) => /* @__PURE__ */ React.createElement("div", { key: c.sym, className: "ucard static" }, /* @__PURE__ */ React.createElement("span", { className: "text-[0.75rem] text-muted block leading-tight" }, /* @__PURE__ */ React.createElement(Mx, { s: c.note })), /* @__PURE__ */ React.createElement("span", { className: "mx text-[1.3rem] font-semibold text-ink block mt-1" }, /* @__PURE__ */ React.createElement(Mx, { s: c.sym }), " = ", fmt(c.val, 3)), /* @__PURE__ */ React.createElement("span", { className: "text-[0.8rem] text-muted" }, c.unit)))), /* @__PURE__ */ React.createElement("p", { className: "mx text-[0.86rem] mt-3 text-ink break-words" }, /* @__PURE__ */ React.createElement(Mx, { s: model.th.rthSub })), /* @__PURE__ */ React.createElement("div", { className: "verify mt-3" }, /* @__PURE__ */ React.createElement("span", { className: "pill pill-ok" }, "Comprobaci\xF3n"), /* @__PURE__ */ React.createElement("span", { className: "text-[0.88rem] text-ink" }, /* @__PURE__ */ React.createElement(Mx, { s: "I_L" }), " del circuito original con carga = ", /* @__PURE__ */ React.createElement("b", { className: "mx" }, fmt(model.th.ILfull, 4), " A"), "; con el equivalente = ", /* @__PURE__ */ React.createElement("b", { className: "mx" }, fmt(model.isThNo === "thevenin" ? model.th.IL : model.th.ILn, 4), " A"), ".")), /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("p", { className: "kicker mb-1" }, "M\xE1xima transferencia de potencia"), /* @__PURE__ */ React.createElement(PowerChart, { Vth: model.th.Vth, Rth: model.th.Rth, RL: P.RL }), /* @__PURE__ */ React.createElement("p", { className: "text-[0.84rem] text-muted mt-1" }, "La carga recibe la m\xE1xima potencia, ", /* @__PURE__ */ React.createElement(Mx, { s: "P_{max}" }), " = ", /* @__PURE__ */ React.createElement("span", { className: "mx" }, fmt(model.th.PLmax, 3), " W"), ", cuando ", /* @__PURE__ */ React.createElement(Mx, { s: "R_L = R_{th}" }), ". El punto amarillo es tu ", /* @__PURE__ */ React.createElement(Mx, { s: "R_L" }), " actual."))), model.rows && /* @__PURE__ */ React.createElement(Panel, { title: "Corrientes de rama y potencia", kicker: "Verificaci\xF3n", defaultOpen: true }, /* @__PURE__ */ React.createElement("div", { className: "overflow-x-auto" }, /* @__PURE__ */ React.createElement("table", { className: "tbl" }, /* @__PURE__ */ React.createElement("thead", null, /* @__PURE__ */ React.createElement("tr", null, /* @__PURE__ */ React.createElement("th", null, "Elemento"), /* @__PURE__ */ React.createElement("th", null, "|I| (A)"), /* @__PURE__ */ React.createElement("th", null, "|V| (V)"), /* @__PURE__ */ React.createElement("th", null, "P absorbida (W)"))), /* @__PURE__ */ React.createElement("tbody", null, model.rows.map((r) => /* @__PURE__ */ React.createElement("tr", { key: r.name }, /* @__PURE__ */ React.createElement("td", null, /* @__PURE__ */ React.createElement(Mx, { s: r.name })), /* @__PURE__ */ React.createElement("td", null, fmt(Math.abs(r.I), 3)), /* @__PURE__ */ React.createElement("td", null, fmt(Math.abs(r.V), 3)), /* @__PURE__ */ React.createElement("td", { className: r.P < -1e-9 ? "neg" : "" }, fmt(r.P, 3), r.P < -1e-9 ? " \xB7 entrega" : "")))))), /* @__PURE__ */ React.createElement("div", { className: "verify mt-3" }, /* @__PURE__ */ React.createElement("span", { className: `pill ${Math.abs(model.power.sup - model.power.abs) < 1e-6 ? "pill-ok" : "pill-bad"}` }, "Balance"), /* @__PURE__ */ React.createElement("span", { className: "text-[0.88rem] text-ink" }, "Potencia entregada por las fuentes ", /* @__PURE__ */ React.createElement("b", { className: "mx" }, fmt(model.power.sup, 3), " W"), " = potencia disipada en resistencias ", /* @__PURE__ */ React.createElement("b", { className: "mx" }, fmt(model.power.abs, 3), " W"), ".")), model.derived && /* @__PURE__ */ React.createElement("ul", { className: "mt-3 flex flex-col gap-1.5" }, model.derived.map((d) => /* @__PURE__ */ React.createElement("li", { key: d.expr, className: "text-[0.88rem] text-ink flex flex-wrap gap-x-2" }, /* @__PURE__ */ React.createElement("span", { className: "text-muted" }, /* @__PURE__ */ React.createElement(Mx, { s: d.label }), ":"), /* @__PURE__ */ React.createElement("span", { className: "mx" }, /* @__PURE__ */ React.createElement(Mx, { s: d.expr }), " = ", /* @__PURE__ */ React.createElement("b", null, fmt(d.val, 4), " ", d.unit)))))), /* @__PURE__ */ React.createElement(Panel, { title: "Del circuito a los sistemas din\xE1micos", kicker: "Para llevar", defaultOpen: false }, /* @__PURE__ */ React.createElement("div", { className: "text-[0.92rem] leading-relaxed text-ink flex flex-col gap-2.5 prose-w" }, /* @__PURE__ */ React.createElement("p", null, "Si agregas capacitores e inductores, las mismas leyes producen derivadas: ", /* @__PURE__ */ React.createElement(Mx, { s: "C dv/dt" }), " en las ecuaciones de ", /* @__PURE__ */ React.createElement(Term, { k: "lck" }, "LCK"), " y ", /* @__PURE__ */ React.createElement(Mx, { s: "L di/dt" }), " en las de ", /* @__PURE__ */ React.createElement(Term, { k: "lvk" }, "LVK"), ". El sistema queda en forma de estado ", /* @__PURE__ */ React.createElement(Mx, { s: "\u1E8B = A x + B u" }), "."), /* @__PURE__ */ React.createElement("p", null, "En corriente directa, despu\xE9s del transitorio, todo deja de cambiar: ", /* @__PURE__ */ React.createElement(Mx, { s: "\u1E8B = 0" }), ". La ecuaci\xF3n de estado se reduce a ", /* @__PURE__ */ React.createElement(Mx, { s: "A x = \u2212B u" }), ", que es exactamente el sistema algebraico que resuelves aqu\xED."), /* @__PURE__ */ React.createElement("p", null, "Los valores propios de esa ", /* @__PURE__ */ React.createElement(Mx, { s: "A" }), " din\xE1mica dan las constantes de tiempo del circuito, y ", /* @__PURE__ */ React.createElement(Term, { k: "inversa" }, "A\u207B\xB9"), " es la ganancia en estado estacionario: cu\xE1nto cambia cada variable por cada volt o ampere de entrada."))))), /* @__PURE__ */ React.createElement("footer", { className: "max-w-7xl mx-auto px-4 sm:px-6 pb-10 text-[0.8rem] text-muted" }, "Convenciones: corrientes de malla en sentido horario; en LCK se suman las corrientes que salen del nodo; la potencia absorbida negativa indica que el elemento entrega energ\xEDa."));
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    /* @__PURE__ */ React.createElement(GlossaryProvider, null, /* @__PURE__ */ React.createElement(App, null))
+  );
+})();
+
+</script>
+</body>
+</html>
